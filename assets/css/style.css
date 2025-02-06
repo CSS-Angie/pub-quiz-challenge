@@ -20,6 +20,7 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
+    min-height:100vh;
 }
 
 header {
@@ -32,7 +33,7 @@ header {
 #hero {
     margin-bottom: 40px;
     /*background: url(/assets/images/logo-pubquiz-challenge.png) no-repeat center center/cover;*/
-    background-color: var(--primary-contrast-color);
+    background-color: var(--secondary-color);
     width: 100%;
 }
 
@@ -77,13 +78,13 @@ header {
     width: 80%;
     display: flex;
     flex-direction: row;
-    padding: 2%;
+    padding: 1%;
     background-color: var(--secondary-color);
     color: var(--text-color);
-    font-family: var(--secondary-font);
+    font-family: var(--primary-font);
     text-align: center;
     border-radius: 5%;
-    box-shadow: 2px 2px var(--secondary-color);
+    font-size:larger;
 }
 
 .btn-start {
@@ -94,10 +95,10 @@ header {
     font-size:  16px;
     font-family: var(--primary-font);
     font-weight: bold;
-    border: 10px solid var(--contrast-color);
+    border: 8px solid var(--contrast-color);
     margin-bottom: 35px;
-    box-shadow: 4px 4px var(--secondary-color);
-   border-radius: 5%;
+    box-shadow: 0 4px var(--secondary-color);
+    border-radius: 5%;
 }
 
 .btn-start:hover {
@@ -106,5 +107,42 @@ header {
 }
 
 footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    background-color: var(--text-color);
+    color: var(--primary-color);
     font-size: small;
+    
+}
+
+@media only screen and (min-width: 600px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+    #hero img {
+        width: 80%;
+    }
+    .input-name {
+        width: 50%;
+}
+}
+
+@media only screen and (min-width: 1024px) {
+    #hero img {
+        width: 65%;
+
+    }
+    .input-name {
+        width: 45%;
+}
+}
+
+@media only screen and (min-width: 1280px) {
+    
+}
+
+@media only screen and (min-width: 1440px) {
+    
 }
