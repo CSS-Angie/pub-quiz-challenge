@@ -13,10 +13,15 @@
 }
 
 /*CSS Basics */
-body {
+* {
+    margin: 0;
+    padding: 0;
     background-color: var(--primary-color);
     font-family: var(--primary-font);
     color: var(--text-color);
+}
+
+body {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -25,46 +30,55 @@ body {
 
 header {
     display: flex;
-    flex-direction: row;
-    align-content: center;
+    flex-direction: column;
     background-color: var(--contrast-color);
     width:100%;
-}
-
-/*CSS homepage*/
-
-#hero {
-    background: url(/assets/images/logo-pub-quiz.png) left no-repeat, url(/assets/images/logo-pub-quiz-challenge.png) right no-repeat;
-    padding: 15px;
-    background-size: contain;
-    background-origin:content-box;
     margin-bottom: 40px;
-    background-color: var(--contrast-color);
-    width: 100%;
-    height: auto;
 }
-/*#hero img {
-    width: 100%;
-    height: auto;
-    padding: 0.5rem;
-    object-fit: fill;
-}*/
 
-.title {
+h1 {
     font-family: var(--secondary-font);
-    font-size: 60px;
     color: var(--primary-color);
     text-shadow: 2px 2px var(--secondary-color);
 }
 
-.intro {
-    font-size: 120%;
+h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 40px;
 }
+
+
+/*CSS homepage*/
+
+#hero {
+    /*background: url(/assets/images/logo-pub-quiz.png) left no-repeat, url(/assets/images/logo-pub-quiz-challenge.png) right no-repeat;
+    */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: var(--contrast-color);
+}
+
+#hero img {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.intro {
+    font-size: 1.2rem}
 
 .intro-text {
     padding: 0 3rem;
+    font-size: medium;
 }
-
 
 .enter-name {
     display: flex;
@@ -121,27 +135,65 @@ footer {
     background-color: var(--contrast-color);
     color: var(--primary-color);
     font-size: small;
-    
+    max-height: 35px;
 }
+
+/* CSS Page the-pub-quiz-challenge
+*/
+#question-area {
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#question {
+    width: 80%;
+}
+
+#image-area {
+    width: 85%;
+    border: 1px solid (var(--contrast-color))
+}
+
+#answer-area {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.button-answer {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+#next-area {
+
+}
+
+
+
+
+/* responsive CSS */
 
 @media only screen and (min-width: 600px) {
 
 }
 
 @media only screen and (min-width: 768px) {
-    #hero {
-        
-    }
     .input-name {
         width: 50%;
 }
 }
 
 @media only screen and (min-width: 1024px) {
-    #hero img {
-        
-
-    }
     .input-name {
         width: 45%;
 }
