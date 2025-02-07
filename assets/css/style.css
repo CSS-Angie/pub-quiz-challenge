@@ -1,15 +1,15 @@
 /*Google Fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 /*CSS Variables*/
 :root {
     --primary-font: "Open Sans", serif;
-    --secondary-font: "Bagel Fat One", serif;
-    --primary-color: #194a7a;
-    --secondary-color: #476f95;
-    --contrast-color: #ffc920;
-    --secondary-contrast-color: #fff89a;
-    --text-color: #d1dbe4;
+    --secondary-font: "Bungee", serif;
+    --primary-color: #151c4a;
+    --secondary-color: #0069b0;
+    --contrast-color: #f88839;
+    --secondary-contrast-color: #ffb000;
+    --text-color: #ffd880;
 }
 
 /*CSS Basics */
@@ -25,27 +25,35 @@ body {
 
 header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-content: center;
+    background-color: var(--contrast-color);
+    width:100%;
 }
 
 /*CSS homepage*/
 
 #hero {
+    background: url(/assets/images/logo-pub-quiz.png) left no-repeat, url(/assets/images/logo-pub-quiz-challenge.png) right no-repeat;
+    padding: 15px;
+    background-size: contain;
+    background-origin:content-box;
     margin-bottom: 40px;
-    /*background: url(/assets/images/logo-pubquiz-challenge.png) no-repeat center center/cover;*/
-    background-color: var(--secondary-color);
-    width: 100%;
-}
-
-#hero img {
+    background-color: var(--contrast-color);
     width: 100%;
     height: auto;
 }
+/*#hero img {
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+    object-fit: fill;
+}*/
 
 .title {
     font-family: var(--secondary-font);
     font-size: 60px;
-    color: var(--contrast-color);
+    color: var(--primary-color);
     text-shadow: 2px 2px var(--secondary-color);
 }
 
@@ -90,14 +98,14 @@ header {
 .btn-start {
     padding: 10px 25px;
     text-align: center;
-    background-color: var(--secondary-contrast-color);
+    background-color: var(--contrast-color);
     color:  var(--primary-color);
     font-size:  16px;
     font-family: var(--primary-font);
     font-weight: bold;
-    border: 8px solid var(--contrast-color);
+    border: 8px solid var(--secondary-contrast-color);
     margin-bottom: 35px;
-    box-shadow: 0 4px var(--secondary-color);
+    box-shadow: 2px 4px var(--contrast-color);
     border-radius: 5%;
 }
 
@@ -110,7 +118,7 @@ footer {
     display: flex;
     flex-direction: column;
     margin-top: auto;
-    background-color: var(--text-color);
+    background-color: var(--contrast-color);
     color: var(--primary-color);
     font-size: small;
     
@@ -121,8 +129,8 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
-    #hero img {
-        width: 80%;
+    #hero {
+        
     }
     .input-name {
         width: 50%;
@@ -131,7 +139,7 @@ footer {
 
 @media only screen and (min-width: 1024px) {
     #hero img {
-        width: 65%;
+        
 
     }
     .input-name {
