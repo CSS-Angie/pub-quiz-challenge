@@ -36,12 +36,7 @@ header {
     margin-bottom: 40px;
 }
 
-h1 {
-    font-family: var(--secondary-font);
-    color: var(--primary-color);
-    text-shadow: 2px 2px var(--secondary-color);
-}
-
+h1,
 h2 {
     font-size: 3rem;
     font-weight: 300;
@@ -50,6 +45,14 @@ h2 {
 
 p {
     font-weight:300;
+}
+
+footer {
+    margin-top: auto;
+    background-color: var(--contrast-color);
+    color: var(--primary-color);
+    font-size: small;
+    padding-top: 2rem;
 }
 
 
@@ -67,12 +70,22 @@ p {
 #hero img {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
+    background-color: var(--contrast-color);
+    align-items: flex-start;
 }
 
-.title {
+#hero .title {
     display: flex;
     flex-direction: column;
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    text-shadow: 2px 2px var(--secondary-color);
+    background-color: var(--contrast-color);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 2.3rem;
 }
 
 .intro-text {
@@ -127,16 +140,6 @@ p {
     background-color: var(--primary-color);
 }
 
-footer {
-    display: flex;
-    flex-direction: column;
-    margin-top: auto;
-    background-color: var(--contrast-color);
-    color: var(--primary-color);
-    font-size: small;
-    max-height: 35px;
-}
-
 /* CSS Page the-pub-quiz-challenge
 */
 #question-area {
@@ -148,17 +151,19 @@ footer {
     align-items: center;
 }
 
+.header-questionpage {
+    font-size: medium;
+}
+
 #question {
-    width: 80%;
+    
 }
 
 #image-area {
-    width: 85%;
-    border: 1px solid (var(--contrast-color))
+    border: 1px solid (var--contrast-color);
 }
 
 #answer-area {
-    width: 85%;
     display: flex;
     flex-direction: column;
     margin: 1rem;
@@ -167,7 +172,6 @@ footer {
 .button-answer {
     display: flex;
     flex-direction: column;
-    width: 85%;
     padding: 1rem;
     margin: 0.5rem;
     text-decoration: none;
@@ -175,7 +179,7 @@ footer {
 
 .button-answer:hover {
     cursor: pointer;
-    box-shadow: 0.5rem 1.5rem var(--secondary-color) 0.5;
+    box-shadow: 0.5rem 1.5rem rgb(248, 136, 57) 0.7;
 }
 
 
@@ -211,7 +215,9 @@ footer {
 /* responsive CSS */
 
 @media only screen and (min-width: 600px) {
-
+    #hero .title {
+        font-size: 3rem;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -221,6 +227,10 @@ footer {
 }
 
 @media only screen and (min-width: 1024px) {
+    #hero .title {
+        font-size: 5rem;
+    }
+
     .input-name {
         width: 45%;
 }
