@@ -3,8 +3,8 @@
 
 /*CSS Variables*/
 :root {
-    --primary-font: "Open Sans", serif;
-    --secondary-font: "Bungee", serif;
+    --primary-font: "Open Sans", sans-serif;
+    --secondary-font: "Bungee", cursive;
     --primary-color: #151c4a;
     --secondary-color: #0069b0;
     --contrast-color: #f88839;
@@ -13,9 +13,8 @@
 }
 
 /*CSS Basics */
+
 * {
-    margin: 0;
-    padding: 0;
     background-color: var(--primary-color);
     font-family: var(--primary-font);
     color: var(--text-color);
@@ -26,6 +25,11 @@ body {
     display: flex;
     flex-direction: column;
     min-height:100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    font-family: var(--primary-font);
+    color: var(--text-color);
 }
 
 header {
@@ -36,7 +40,6 @@ header {
     margin-bottom: 40px;
 }
 
-h1,
 h2 {
     font-size: 3rem;
     font-weight: 300;
@@ -46,15 +49,6 @@ h2 {
 p {
     font-weight:300;
 }
-
-footer {
-    margin-top: auto;
-    background-color: var(--contrast-color);
-    color: var(--primary-color);
-    font-size: small;
-    padding-top: 2rem;
-}
-
 
 /*CSS homepage*/
 
@@ -88,8 +82,12 @@ footer {
     font-size: 2.3rem;
 }
 
+.intro {
+    font-weight: 300;
+    margin-bottom: 30px;
+}
 .intro-text {
-    padding: 0 3rem;
+    padding: 0 2rem;
 }
 
 .enter-name {
@@ -121,6 +119,32 @@ footer {
     font-size:larger;
 }
 
+#level-area {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+#level-area .btn-level {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    margin-top: 1rem;
+    width: 90%;
+    font-weight: 400;
+    text-transform: lowercase;
+    justify-content: center;
+    margin-left: 1rem;
+    letter-spacing: 2px;
+}
+
+#level-area .btn-level:hover {
+    cursor: pointer;
+    background-color: var(--secondary-color);
+}
+
 .btn-start {
     padding: 10px 25px;
     text-align: center;
@@ -130,14 +154,28 @@ footer {
     font-family: var(--primary-font);
     font-weight: bold;
     border: 8px solid var(--secondary-contrast-color);
-    margin-bottom: 35px;
+    margin-bottom: 45px;
     box-shadow: 2px 4px var(--contrast-color);
     border-radius: 5%;
+    text-transform: uppercase;
 }
 
 .btn-start:hover {
     color: var(--text-color);
     background-color: var(--primary-color);
+}
+
+footer {
+    margin-top: auto;
+    background-color: var(--contrast-color);
+    color: var(--primary-color);
+}
+
+footer p {
+    background-color: var(--contrast-color);
+    color: var(--primary-color);
+    font-size: small;
+    margin: 0;
 }
 
 /* CSS Page the-pub-quiz-challenge
@@ -167,19 +205,21 @@ footer {
     display: flex;
     flex-direction: column;
     margin: 1rem;
+    width: 100%;
 }
 
 .button-answer {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    margin: 0.5rem;
+    margin: 0.5rem 0 0 1rem;
     text-decoration: none;
+    width:90%;
 }
 
 .button-answer:hover {
     cursor: pointer;
-    box-shadow: 0.5rem 1.5rem rgb(248, 136, 57) 0.7;
+    background-color: var(--secondary-color);
 }
 
 
@@ -202,6 +242,12 @@ footer {
     padding: 0.5rem 2rem;
 }
 
+.button-next:hover {
+    padding: 0.5rem 2rem;
+    background-color: var(--secondary-color);
+}
+
+/*CSS Results Page */
 
 
 

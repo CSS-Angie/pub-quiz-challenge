@@ -40,11 +40,20 @@
         <!-- Enter Name area-->
         <div class="enter-name">
             <label class="label-name" for="name">Enter your Name</label>
-            <input type="text" class="input-name" id="name">
+            <input type="text" class="input-name" id="name"  aria-label="field to type the name" required>
         </div>
         <!--Hidden Area to be displayed after filling out name-->
             <p hidden id="show-name">Hello <span id="name-text"></span>!</p>
         <!--Button area-->
+        <div id="level-area">
+            <p>Choose your level:</p>
+            <label for="btn-novice" class="form-label" hidden>Novice</label>
+            <button type="button" id="btn-novice" onclick="novice-questions" class="btn btn-level"  aria-label="button to choose the easy questions">Novice</button>
+            <label for="btn-experienced" class="form-label" hidden>Experienced</label>
+            <button type="button" id="btn-experienced" onclick="novice-questions" class="btn btn-level"  aria-label="button to choose the normal questions">Experienced</button>
+            <label for="btn-expert" class="form-label" hidden>Expert</label>
+            <button type="button" id="btn-expert" onclick="novice-questions" class="btn btn-level"  aria-label="button to choose the difficult questions">Expert</button>
+        </div>
         <div>
             <label for="btn-start" class="form-label" hidden>Start</label>
             <a href="the-pub-quiz-challenge.html"> <button type="submit" class="btn btn-start" id="btn-start" name="confirmed"

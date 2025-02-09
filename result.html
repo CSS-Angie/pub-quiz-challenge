@@ -17,9 +17,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
 
+
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <title>The Ultimate Pubquiz</title>
+    <title>The Ultimate Pub Quiz</title>
 </head>
 
 <body>
@@ -31,18 +32,39 @@
         <div class="title">The Ultimate Pub Quiz</div>
         </div>
     </header>
-     <!--No Navigation-->
-    <!--Hero section-->
-    <header id="hero">
-        <div class="title">The Ultimate Pubquiz</div>
-    </header>
     <main>
-
+    <!--Text area-->
+        <h1 class="intro">Try and test your knowledge!</h1>
+            <p class="intro-text">You know what it takes to become a champion. Right? Well, here is the way to your succes! <br>Start training,
+            take this test and exercise those brain muscles!</p>
+        <!-- Show score area-->
+        <div id="show-name">
+            <p ><span id="name-text">, here's your final score!</span>!</p>
+        </div>
+        <div id="score-display">
+            <p>Total score:<span id="final-score"></span></p>
+        </div> 
+           
+        <!--Button area for restarting the quiz-->
+        <div id="level-area">
+            <p>Choose your level:</p>
+            <label for="btn-novice" class="form-label" hidden>Novice</label>
+            <button type="button" id="btn-novice" onclick="novice-questions" class="btn btn-level"  aria-label="button to choose the easy questions">Novice</button>
+            <label for="btn-experienced" class="form-label" hidden>Experienced</label>
+            <button type="button" id="btn-experienced" onclick="novice-questions" class="btn btn-level"  aria-label="button to choose the normal questions">Experienced</button>
+            <label for="btn-expert" class="form-label" hidden>Expert</label>
+            <button type="button" id="btn-expert" onclick="novice-questions" class="btn btn-level"  aria-label="button to choose the difficult questions">Expert</button>
+        </div>
+        <div>
+            <label for="btn-start" class="form-label" hidden>Start</label>
+            <a href="the-pub-quiz-challenge.html"> <button type="submit" class="btn btn-start" id="btn-start" name="confirmed"
+                aria-label="button to restart the challenge">Play again!</button></a>
+        </div>
     </main>
     <footer>
-        
+        <p>Copyright © 2025</p>
     </footer>
-    <script src="assets/js/script.js"></script>
+        <script src="assets/js/script.js"></script>
 </body>
 
 </html>
