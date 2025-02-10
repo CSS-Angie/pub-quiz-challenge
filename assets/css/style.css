@@ -18,6 +18,9 @@
     background-color: var(--primary-color);
     font-family: var(--primary-font);
     color: var(--text-color);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -25,8 +28,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height:100vh;
-    margin: 0;
-    padding: 0;
     background-color: var(--primary-color);
     font-family: var(--primary-font);
     color: var(--text-color);
@@ -80,6 +81,7 @@ p {
     justify-content: center;
     width: 100%;
     font-size: 2.3rem;
+    text-decoration: none;
 }
 
 .intro {
@@ -119,12 +121,22 @@ p {
     font-size:larger;
 }
 
+#show-name {
+    display: none;
+}
+
 #level-area {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
-    width: 100%;
-    text-transform: uppercase;
+    width: 90%;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+p .choose {
+    text-align: center;
+
 }
 
 #level-area .btn-level {
@@ -138,6 +150,8 @@ p {
     justify-content: center;
     margin-left: 1rem;
     letter-spacing: 2px;
+    font-size: 1.2rem;
+    transition: 0.3s;
 }
 
 #level-area .btn-level:hover {
@@ -180,9 +194,8 @@ footer p {
 
 /* CSS Page the-pub-quiz-challenge
 */
+
 #question-area {
-    width: 100vw;
-    height: 100vh;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -191,21 +204,31 @@ footer p {
 
 .header-questionpage {
     font-size: medium;
+    font-weight: lighter;
 }
 
 #question {
     
 }
 
-#image-area {
-    border: 1px solid (var--contrast-color);
+#image-area  {
+    display: block; 
+    margin-bottom:2rem;
+}
+
+#image-area img {
+    border: var(--contrast-color) 5px solid;
+    max-width:90%;
+    background-color: var(--contrast-color);
 }
 
 #answer-area {
     display: flex;
     flex-direction: column;
     margin: 1rem;
-    width: 100%;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
 }
 
 .button-answer {
@@ -215,6 +238,7 @@ footer p {
     margin: 0.5rem 0 0 1rem;
     text-decoration: none;
     width:90%;
+    transition: 0.3s;
 }
 
 .button-answer:hover {
@@ -234,12 +258,11 @@ footer p {
     margin: 0.5rem;
 }
 
-#next-area {
-    width:100%;
-}
-
 .button-next {
+    display: block; /*will become block to center the button*/
     padding: 0.5rem 2rem;
+    margin: 1rem 0;
+    transition: 0.3s;
 }
 
 .button-next:hover {
@@ -263,6 +286,7 @@ footer p {
 @media only screen and (min-width: 600px) {
     #hero .title {
         font-size: 3rem;
+        
     }
 }
 

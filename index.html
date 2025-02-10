@@ -28,7 +28,7 @@
     <!--Hero section-->
     <header>
         <div id="hero">
-        <div><img src="/assets/images/logo-pub-quiz.png" alt="Logo of The Ultimate Pub Quiz"></div>
+        <div><img src="assets/images/logo-pub-quiz.png" alt="Logo of The Ultimate Pub Quiz"></div>
         <div class="title">The Ultimate Pub Quiz</div>
         </div>
     </header>
@@ -43,10 +43,10 @@
             <input type="text" class="input-name" id="name"  aria-label="field to type the name" required>
         </div>
         <!--Hidden Area to be displayed after filling out name-->
-            <p hidden id="show-name">Hello <span id="name-text"></span>!</p>
+            <p id="show-name">Hello <span id="name-text"></span>!</p>
         <!--Button area-->
         <div id="level-area">
-            <p>Choose your level:</p>
+            <p class="choose">Choose your level:</p>
             <label for="btn-novice" class="form-label" hidden>Novice</label>
             <button type="button" id="btn-novice" onclick="novice-questions" class="btn btn-level"  aria-label="button to choose the easy questions">Novice</button>
             <label for="btn-experienced" class="form-label" hidden>Experienced</label>
