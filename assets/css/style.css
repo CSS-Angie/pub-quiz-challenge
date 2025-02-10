@@ -235,7 +235,7 @@ footer p {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    margin: 0.5rem 0 0 1rem;
+    margin: 0.5rem 0 0;
     text-decoration: none;
     width:90%;
     transition: 0.3s;
@@ -257,6 +257,15 @@ footer p {
     padding: 1rem;
     margin: 0.5rem;
 }
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}
+
 
 .button-next {
     display: block; /*will become block to center the button*/
