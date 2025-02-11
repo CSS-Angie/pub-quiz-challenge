@@ -270,7 +270,7 @@ footer p {
 .button-next {
     display: block; /*will become block to center the button*/
     padding: 0.5rem 2rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
     transition: 0.3s;
 }
 
