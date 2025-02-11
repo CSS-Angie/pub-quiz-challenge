@@ -51,6 +51,10 @@ p {
     font-weight:300;
 }
 
+a {
+    text-decoration: none;
+}
+
 /*CSS homepage*/
 
 #hero {
@@ -81,7 +85,6 @@ p {
     justify-content: center;
     width: 100%;
     font-size: 2.3rem;
-    text-decoration: none;
 }
 
 .intro {
@@ -151,12 +154,13 @@ p .choose {
     margin-left: 1rem;
     letter-spacing: 2px;
     font-size: 1.2rem;
-    transition: 0.3s;
+    
 }
 
 #level-area .btn-level:hover {
     cursor: pointer;
     background-color: var(--secondary-color);
+    transition: 0.3s;
 }
 
 .btn-start {
@@ -207,6 +211,7 @@ footer p {
     font-weight: lighter;
 }
 
+
 #question {
     
 }
@@ -238,12 +243,13 @@ footer p {
     margin: 0.5rem 0 0;
     text-decoration: none;
     width:90%;
-    transition: 0.3s;
+    
 }
 
 .button-answer:hover {
     cursor: pointer;
     background-color: var(--secondary-color);
+    transition: 0.3s;
 }
 
 
@@ -271,12 +277,13 @@ footer p {
     display: block; /*will become block to center the button*/
     padding: 0.5rem 2rem;
     margin: 2rem 0;
-    transition: 0.3s;
+    
 }
 
 .button-next:hover {
     padding: 0.5rem 2rem;
     background-color: var(--secondary-color);
+    transition: 0.3s;
 }
 
 /*CSS Results Page */

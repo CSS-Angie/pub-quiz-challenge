@@ -1,4 +1,4 @@
-const questions = [ 
+const questionsEasy = [ 
     {question:"Who was the first disney character created by Walt Disney?",		
         answers: [  {text: "Alladin", correct: false},	
                     {text: "Donald Duck", correct: false},	
@@ -198,52 +198,47 @@ const questions = [
  */
 function textWithName() {
     const inputBox = document.getElementById("input-name");
-    const givenName = document.getElementById("name");
-    const showName = document.getElementById("show-name");
+    const firstName = document.getElementById("name");
+    const displayFirstName = document.getElementById("show-name");
 
     inputBox.addEventListener("input", displayName);
-    function displayName(e) {
-        showName.textContent(`Hello ${givenName}!`);
+    
+    function displayName(firstName) {
+        getAttribute(inputBox, firstName);
+        setAttribute("id", displayFirstName).textContent(`Hello ${firstName}!`);
+        return (displayFirstName.style.display = "block");
     }
 }
 
 const questionElement = document.getElementById("question");
-const answerButton = document.getElementById("button-answer");
+const answerButton = document.getElementsByClassName("button-answer");
 const nextButton = document.getElementById("button-next");
 
 let questionIndex = 0;
 let score = 0;
 let questionCount = 0;
 
-function startGame() {
+function runGame() {
     questionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Next";
     showQuestion();
 }
 
-var questionNew = Math.floor(Math.random()*length.questions) + 1[questionIndex];
+var newQuestion = Math.floor(Math.random()*length.questionsEasy) + 1[questionIndex];
 
 function showQuestion() {
-    questionElement.innerHTML = questionNew.questions;
+    questionElement.innerHTML = newQuestion.questionsEasy;
 
-    questionNew.answers.forEach(answer => {
+    newQuestion.answers.forEach(answer => {
         const buttonAnswer = document.createElement("button-answer");
         buttonAnswer.textContent = answers.text;
         buttonAnswer.classList.add("button-answer");
         answerButton.appendChild(buttonAnswer);
-        buttonAnswer.addEventListener ("click", selectAnswer);
-        console.log(questionNew);
-    });
+        buttonAnswer.addEventListener ("click", selectAnswer);  
+    }); 
 } 
 
-
-function resetState() {
-    nextButton.style.display = "none";
-    while (answerButton.firstChild) {
-        answerButton.removeChild(answerButton.firstChild);
-    }
-}
 
 function selectAnswer (e) {
     const selectedButton = e.target;
@@ -253,22 +248,26 @@ function selectAnswer (e) {
     } else {
             selectedButton.classList.add("incorrect");
         }
-        buttonAnswer.disaabled =  true;
+        buttonAnswer.disabled =  true;
         nextButton.style.display = "block";
     }
 
 function chooseLevel() {
-    const buttonNovice = document.getElementById("btn-novice");
-    const buttonExperienced = document.getElementById("btn-experienced");
-    const buttonExpert = document.getElementById("btn-expert");
+    let buttonsLevel = document.getElementByTagName("btn-level");
+    
+    for (let button of buttonsLevel) {
+        button.addEventListener("click", function(){
+            let gameLevel = this.getAttribute("data-type");
+            runGame(gameLevel);
+        })
+    } 
+   
+}
 
-    if (buttonNovice){
-
-    } else if (buttonExperienced){
-
-    } else {
-        buttonExpert
-    }
+function nextButtonClick (){
+    questionIndex++;
+    /**total amount of questions=10**/
+    showQuestion();
 }
 
 
