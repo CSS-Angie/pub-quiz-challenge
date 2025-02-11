@@ -2,7 +2,8 @@ function textWithName() {
     const inputBox = document.getElementById("input-name");
     const firstName = document.getElementById("name");
     const displayFirstName = document.getElementById("show-name");
-
+    let showName = document.getElementById("show-name");
+    showName.classList.remove(hidden);
     inputBox.addEventListener("input", displayName);
     
     function displayName(firstName) {
