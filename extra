@@ -1,0 +1,59 @@
+function textWithName() {
+    const inputBox = document.getElementById("input-name");
+    const firstName = document.getElementById("name");
+    const displayFirstName = document.getElementById("show-name");
+
+    inputBox.addEventListener("input", displayName);
+    
+    function displayName(firstName) {
+        getAttribute(inputBox, firstName);
+        setAttribute("id", displayFirstName).textContent(`Hello ${firstName}!`);
+        return (displayFirstName.style.display = "block");
+    }
+}
+
+
+function showQuestion() {
+    questionElement.innerHTML = newQuestion.questionsEasy;
+
+    newQuestion.answers.forEach(answer => {
+        const buttonAnswer = document.createElement("button-answer");
+        buttonAnswer.textContent = answers.text;
+        buttonAnswer.classList.add("button-answer");
+        answerButton.appendChild(buttonAnswer);
+        buttonAnswer.addEventListener ("click", selectAnswer);  
+    }); 
+} 
+
+
+function selectAnswer (e) {
+    const selectedButton = e.target;
+    const isCorrect = selectedButton.dataset.correct === "true";
+    if (isCorrect) {
+        selectedButton.classList.add("correct");
+    } else {
+            selectedButton.classList.add("incorrect");
+        }
+        buttonAnswer.disabled =  true;
+        nextButton.style.display = "block";
+    }
+
+function chooseLevel() {
+    let buttonsLevel = document.getElementByTagName("btn-level");
+    
+    for (let button of buttonsLevel) {
+        button.addEventListener("click", function(){
+            let gameLevel = this.getAttribute("data-type");
+            runGame(gameLevel);
+        })
+    } 
+   
+}
+
+function nextButtonClick (){
+    questionIndex++;
+    /**total amount of questions=10**/
+    showQuestion();
+}
+
+

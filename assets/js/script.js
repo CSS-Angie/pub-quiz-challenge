@@ -1,273 +1,325 @@
-const questionsEasy = [ 
-    {question:"Who was the first disney character created by Walt Disney?",		
-        answers: [  {text: "Alladin", correct: false},	
-                    {text: "Donald Duck", correct: false},	
-                    {text: "Mickey Mouse", correct: true},	
-        ]},
-    {question:"Which painting is also known as La Joconde?",		
-        answers: [  {text: "Girl with the pearl earring", correct: false},	
-                    {text: "Mona Lisa", correct: true},	
-                    {text: "Woman with a mirror", correct: false},	
-                ]},
-    {question:"Who sings Poker Face?",		
-        answers: [   {text:"Lady Gaga", correct: true},	
-                     {text:"Madonna", correct: false},	
-                     {text:"Taylor Swift", correct: false},	
-                    ]},
-    {question:"	What are the names of Cinderella’s evil stepsisters?",		
-        answers: [   {text:"Anastasia and Drizella"	, correct: true},	
-                     {text:"Gizelle and Anabelle"	, correct: false},	
-                     {text:"Florence and Marge"	, correct: false},	
-                    ]},
-    {question:"	Which College Is Elle Applying for In Legally Blonde?",		
-        answers: [    {text:"Yale", correct: false},	
-                      {text:"Harvard", correct: true},	
-                      {text:"Princeton", correct: false},	
-                    ]},
-    {question:"	What’s the name of the sword in The Sword In The Stone?",		
-        answers: [    {text:"Glamdring", correct: false},	
-                      {text:"Callandor", correct: false},	
-                      {text:"Excalibur", correct: true},	
-                    ]},
-    {question:"	Stark Industries is associated with which fictonal superhero?",		
-        answers: [   {text:"Iron Man", correct: true},	
-                     {text:"Iron Fist", correct: false},	
-                     {text:"aptain America", correct: false},	
-                    ]},
-    {question:"	Which Museum Is Featured In Night at the Museum?",		
-        answers: [   {text:"Museum of Natural History"	, correct: true},	
-                     {text:"The Smithsonian"	, correct: false},	
-                     {text:"National Museum of the American Indian"	, correct: false},	
-                    ]},
-    {question:"	The Playstation game console was developed by which company?" ,		
-        answers: [   {text:"intendo", correct: false},	
-                     {text:"Sega", correct: false},	
-                     {text:"Sony", correct: true},	
-                    ]},
-    {question:"	Which part of his body did Charlie Chaplin insure?",		
-        answers: [   {text:"Moustache", correct: false},	
-                     {text:"Hands", correct: false},	
-                     {text:"Feet", correct: true},	
-                    ]},
-    {question:"	What is the name of the element with the chemical symbol ‘He’?",		
-        answers: [  {text:"	Helium", correct: true},	
-                    {text:"	Hydrogen", correct: false},	
-                    {text:"	Holmium", correct: false},	
-                ]},
-    {question:"	Which animal can be seen on the Porsche logo?",		
-        answers: [  {text:"	Cougar", correct: false},	
-                    {text:"	Horse", correct: true},	
-                    {text:"	Cheetah", correct: false},	
-                ]},
-    {question:"	What type of scientist studies living plants?",		
-        answers: [  {text:"	Paleontologist", correct: false},	
-                    {text:"	Entomologist", correct: false},	
-                    {text:"	Botanist", correct: true},	
-                ]},
-    {question:"	What do you call traditional Japanese female entertainers who act as hostesses and whose skills include performing various Japanese arts?",		
-        answers: [  {text:"	Hakama", correct: false},	
-                    {text:"	Geisha", correct: true},	
-                    {text:"	Maiko", correct: false},	
-                ]},
-    {question:"	The Aztecs even used cocoa beans as what?",		
-    answers: [      {text:"	Currency", correct: true},	
-                    {text:"	Drugs", correct: false},	
-                    {text:"	Weapon decorations", correct: false},	
-                ]},
-    {question:"	“Mama Mia” is based on a song by which Swedish musical act?",		
-        answers: [  {text:"	ABBA", correct: true},	
-                    {text:"	Bee Gees", correct: false},	
-                    {text:"	Queen", correct: false},	
-                ]},
-    {question:"	In Norse mythology, what is Thor the God of?",		
-        answers: [  {text:"	Rain", correct: false},	
-                    {text:"	Dancing", correct: false},	
-                    {text:"	Thunder", correct: true},	
-                ]},
-    {question:"	Where is the Great Wall Located?",		
-        answers: [  {text:"	China", correct: true},	
-                    {text:"	South Korea", correct: false},	
-                    {text:"	North Korea", correct: false},	
-                ]},
-    {question:"	Mr. Pibb was a soft drink created by the Coca-Cola Company to compete with what other soft drink?",		
-        answers: [  {text:"	Cherry Cola", correct: false},	
-                    {text:"	Dr. Pepper", correct: true},	
-                    {text:"	Root beer", correct: false},	
-                ]},
-    {question:"	Who was married to John F. Kenedy and was first lady from 1961 until 1963?",		
-        answers: [  {text:"	Michelle LaVaughn Robinson Kenedy"	, correct: false},	
-                    {text:"	Eleanor Kenedy"	, correct: false},	
-                    {text:"	Jacqueline Kennedy Onassis"	, correct: true},	
-                ]},
-    {question:"	What year did the Chernobyl disaster occur?",		
-        answers: [  {text:"	1986", correct: true},	
-                    {text:"	1984", correct: false},	
-                    {text:"	1985", correct: false},	
-                ]},
-    {question:"	A Blue Whale has a heart roughly the size of a what?",		
-        answers: [  {text:"	VW Beetle", correct: true},	
-                    {text:"	Basketball", correct: false},	
-                    {text:"	Grapefruit", correct: false},	
-                ]},
-    {question:"	Which country flag, nicknamed “The Maple Leaf’ consists of a red field with a white square and features a red maple leaf at its center?",		
-        answers: [  {text:"	Turkey", correct: false},	
-                    {text:"	Canada", correct: true},	
-                    {text:"	Colombia", correct: false},	
-                ]},
-    {question:"	How would Groot answer this question?," ,	
-        answers: [  {text:"	YO homie whats up!", correct: false},	
-                    {text:"	I am groot", correct: true},	
-                    {text:"	Groot I am young padawan"	, correct: false},	
-                ]},
-    {question:"	What did Aladdin steal in the marketplace at the beginning of “Aladdin”?",		
-        answers: [  {text:"	Apple", correct: false},	
-                    {text:"	Gold", correct: false},	
-                    {text:"	Bread", correct: true},	
-                ]},
-    {question:"	What popular beverage once contained cocaine?",		
-        answers: [  {text:"	Coca-Cola", correct: true},	
-                    {text:"	Schweppes", correct: false},	
-                    {text:"	Dr Pepper", correct: false},	
-                ]},
-    {question:"	Henry John Heinz founded a company specializing in the production of which food product?",		
-        answers: [  {text:"	Mustard", correct: false},	
-                    {text:"	Ketchup", correct: true},	
-                    {text:"	Relish", correct: false},	
-                ]},
-    {question:"	What is the primary ingredient in guacamole?",		
-        answers: [  {text:"	Tomato", correct: false},	
-                    {text:"	Pineapple", correct: false},	
-                    {text:"	Avocado", correct: true},	
-                ]},
-    {question:"	Which animal is, according to the New York times, by far the most expensive animal to keep in a zoo?",		
-        answers: [  {text:"	Hippo", correct: false},	
-                    {text:"	Elephant", correct: false},	
-                    {text:"	Giant panda", correct: true},	
-                ]},
-    {question:"	Which is an Icelandic traditional dish?",		
-        answers: [  {text:"	Sheep’s head", correct: true},	
-                    {text:"	Rugbrød", correct: false},	
-                    {text:"	Lutefisk", correct: false},	
-                ]},
-    {question:"	Which country does gouda cheese come from?",		
-        answers: [  {text:"	Belgium", correct: false},	
-                    {text:"	Switzerland", correct: false},	
-                    {text:"	Netherlands", correct: true},	
-                ]},  
-    {question:"	Worldwide, what is the third most popular drink?",		
-        answers: [  {text:"	Beer", correct: true},	
-                    {text:"	Water", correct: false},	
-                    {text:"	Coffee", correct: false},	
-                ]},
-    {question:"	What is Mickey Mouses dog called?",		
-        answers: [  {text:"	Bruce", correct: false},	
-                    {text:"	Jude", correct: false},	
-                    {text:"	Pluto", correct: true},	
-                ]},
-    {question:"	What are Santa’s little helpers called?",		
-        answers: [  {text:"	Gremlins", correct: false},	
-                    {text:"	Elves", correct: true},	
-                    {text:"	Little People", correct: false},	
-                ]},
-    {question:"	In the following which one food Giant Pandas normally eat?",		
-        answers: [  {text:"	Bamboo", correct: true},	
-                    {text:"	Corn", correct: false},	
-                    {text:"	Fish", correct: false},	
-                ]},
-    {question:"	In the movie Finding Nemo, which country has Nemo been taken to?",		
-        answers: [  {text:"	England", correct: false},	
-                    {text:"	Australia", correct: true},	
-                    {text:"	New Zealand", correct: false},	
-                ]},
-    {question:"	What type of animals pull Santa’s sleigh?",		
-        answers: [ {text:"	Dogs", correct: false},	
-                    {text:"	Horses", correct: false},	
-                    {text:"	Reindeer", correct: true},	
-                ]},
-    {question:"	What color is the Grinch, who stole Christmas?",		
-        answers: [  {text:"	Green", correct: true},	
-                    {text:"	Blue", correct: false},	
-                    {text:"	Brown", correct: false},	
-                ]},
-        
-]
+/** questions for Novice */
+let questionsEasy = [ 
+        {
+            question: "Who was the first Disney character created by Walt Disney?",
+            answerA: "Alladin ", 
+            answerB: "Donald Duck", 
+            answerC: "Mickey Mouse",
+            correct: 3
+        },
+        {
+            question: "Which painting is also known as La Joconde?",
+            answerA: "Girl with the pearl earring", 
+            answerB: "Mona Lisa", 
+            answerC: "Woman with a mirror", 
+            correct: 2
+        },
+        {
+            question: "Who sings Poker Face?",
+            answerA: "Lady Gaga", 
+            answerB: "Madonna ", 
+            answerC: "Taylor Swift", 
+            correct: 1
+        },
+        {
+            question: "What are the names of Cinderella’s evil stepsisters?",
+            answerA: "Anastasia and Drizella", 
+            answerB: "Gizelle and Anabelle", 
+            answerC: "Florence and Marge", 
+            correct: 1
+        },
+        {
+            question: "Which College Is Elle Applying for In Legally Blonde?",
+            answerA: "Yale", 
+            answerB: "Harvard", 
+            answerC: "Princeton", 
+            correct: 2
+        },
+        {
+            question: "What’s the name of the sword in The Sword In The Stone?",
+            answerA: "Glamdring", 
+            answerB: "Callandor", 
+            answerC: "Excalibur", 
+            correct: 3
+        },
+        {
+            question: "Stark Industries is associated with which fictonal superhero?",
+            answerA: "Iron Man", 
+            answerB: "Iron Fist", 
+            answerC: "Captain America", 
+            correct: 1
+        },
+        {
+            question: "Which Museum Is Featured In Night at the Museum?",
+            answerA: "Museum of Natural History", 
+            answerB: "The Smithsonian", 
+            answerC: "National Museum of the American Indian", 
+            correct: 1
+        },
+        {
+            question: "The Playstation game console was developed by which company?",
+            answerA: "Nintendo",
+            answerB: "Sega",
+            answerC: "Sony", 
+            correct: 3
+        },
+        {
+            question: "Which part of his body did Charlie Chaplin insure?",
+            answerA: "Moustache ",
+            answerB: "Hands ",
+            answerC: "Feet ", 
+            correct: 3
+        },
+        {
+            question: "What is the name of the element with the chemical symbol ‘He’?",
+            answerA: "Helium",
+            answerB: "Hydrogen",
+            answerC: "Holmium", 
+            correct: 1
+        },
+        {
+            question: "Which animal can be seen on the Porsche logo?",
+            answerA: "Cougar",
+            answerB: "Horse",
+            answerC: "Cheetah", 
+            correct: 2
+        },
+        {
+            question: "What type of scientist studies living plants?",
+            answerA: "Paleontologist",
+            answerB: "Entomologist",
+            answerC: "Botanist", 
+            correct: 3
+        },
+        {
+            question: "What do you call traditional Japanese female entertainers who act as hostesses and whose skills include performing various Japanese arts?",
+            answerA: "Hakama",
+            answerB: "Geisha",
+            answerC: "Maiko ", 
+            correct: 2
+        },
+        {
+            question: "The Aztecs even used cocoa beans as what?",
+            answerA: "Currency",
+            answerB: "Drugs",
+            answerC: "Weapon decorations", 
+            correct: 1
+        },
+        {
+            question: "'Mama Mia' is based on a song by which Swedish musical act?",
+            answerA: "	ABBA",
+            answerB: "	Bee Gees",
+            answerC: "	Queen", 
+            correct: 1
+        },
+        {
+            question: "	In Norse mythology, what is Thor the God of?",
+            answerA: "Rain",
+            answerB: "Dancing",
+            answerC: "Thunder", 
+            correct: 3
+        },
+        {
+            question: "Where is the Great Wall Located?",
+            answerA: "China",
+            answerB: "South Korea",
+            answerC: "North Korea", 
+            correct: 1
+        },
+        {
+            question: "Mr. Pibb was a soft drink created by the Coca-Cola Company to compete with what other soft drink?",
+            answerA: "Cherry Cola",
+            answerB: "Dr. Pepper",
+            answerC: "Root beer", 
+            correct: 2
+        },
+        {
+            question: "Who was married to John F. Kenedy and was first lady from 1961 until 1963?",
+            answerA: "Michelle LaVaughn Robinson Kenedy",
+            answerB: "Eleanor Kenedy",
+            answerC: "Jacqueline Kennedy Onassis", 
+            correct: 3
+        },
+        {
+            question: "What year did the Chernobyl disaster occur?",
+            answerA: "1986",
+            answerB: "1984",
+            answerC: "1985", 
+            correct: 1
+        },
+        {
+            question: "A Blue Whale has a heart roughly the size of a what?",
+            answerA: "VW Beetle",
+            answerB: "Basketball",
+            answerC: "Grapefruit", 
+            correct: 1
+        },
+        {
+            question: "Which country flag, nicknamed “The Maple Leaf’ consists of a red field with a white square and features a red maple leaf at its center?",
+            answerA: "Turkey",
+            answerB: "Canada",
+            answerC: "Colombia", 
+            correct: 2
+        },
+        {
+            question: "How would Groot answer this question?",
+            answerA: "YO homie whats up!",
+            answerB: "I am groot",
+            answerC: "Groot I am young padawan", 
+            correct: 2
+        },
+        {
+            question: "What did Aladdin steal in the marketplace at the beginning of “Aladdin”?",
+            answerA: "Apple",
+            answerB: "Gold",
+            answerC: "Bread", 
+            correct: 3
+        },
+        {
+            question: "What popular beverage once contained cocaine?",
+            answerA: "Coca-Cola",
+            answerB: "Schweppes",
+            answerC: "Dr Pepper", 
+            correct: 1
+        },
+        {
+            question: "Henry John Heinz founded a company specializing in the production of which food product?",
+            answerA: "Mustard",
+            answerB: "Ketchup",
+            answerC: "Relish", 
+            correct: 2
+        },
+        {
+            question: "What is the primary ingredient in guacamole?",
+            answerA: "Tomato",
+            answerB: "Pineapple",
+            answerC: "Avocado", 
+            correct: 3
+        },
+        {
+            question: "Which animal is, according to the New York times, by far the most expensive animal to keep in a zoo?",
+            answerA: "Hippo",
+            answerB: "Elephant",
+            answerC: "Giant panda", 
+            correct: 3
+        },
+        {
+            question: "Which is an Icelandic traditional dish?",
+            answerA: "Sheep’s head",
+            answerB: "Rugbrød",
+            answerC: "Lutefisk", 
+            correct: 1
+        },
+        {
+            question: "Which country does gouda cheese come from?",
+            answerA: "Belgium",
+            answerB: "Switzerland",
+            answerC: "Netherlands", 
+            correct: 3
+        },
+        {
+            question: "Worldwide, what is the third most popular drink?",
+            answerA: "Beer",
+            answerB: "Water",
+            answerC: "Coffee", 
+            correct: 1
+        },
+        {
+            question: "What is Mickey Mouses dog called?",
+            answerA: "Bruce",
+            answerB: "Jude",
+            answerC: "Pluto", 
+            correct: 3
+        },
+        {
+            question: "What are Santa’s little helpers called?",
+            answerA: "Gremlins",
+            answerB: "Elves",
+            answerC: "Little People", 
+            correct: 2
+        },
+        {
+            question: "In the following which one food Giant Pandas normally eat?",
+            answerA: "Bamboo",
+            answerB: "Corn",
+            answerC: "Fish", 
+            correct: 1
+        },
+        {
+            question: "In the movie Finding Nemo, which country has Nemo been taken to?",
+            answerA: "England",
+            answerB: "Australia",
+            answerC: "New Zealand", 
+            correct: 2
+        },
+        {
+            question: "What type of animals pull Santa’s sleigh?",
+            answerA: "Dogs",
+            answerB: "Horses",
+            answerC: "Reindeer", 
+            correct: 3
+        },
+        {
+            question: "What color is the Grinch, who stole Christmas?",
+            answerA: "Green",
+            answerB: "Blue",
+            answerC: "Brown", 
+            correct: 1
+        }
+    ]
+/** questions for Experienced */    
 
+/** questions for Expert*/
+
+
+/** Constants and variables */
+
+const answerButtons = document.getElementsByClassName("button-answer");
+const nextButton = document.getElementById("button-next");
+const scoreCorrect = 100;
+const maxQuestions = 10;
+
+let currentQuestion = {};
+let acceptingAnswers = true;
+let score = 0;
+let questionCount = 0;
+let availableQuestions = [];
+
+
+runGame = () => {
+    questionCount = 0;
+    score = 0;
+    availableQuestions = [...questionsEasy];
+    console.log(availableQuestions);
+    NewQuestion();
+}
+
+/**New question is generated from the array */
+NewQuestion = () => {
+questionCount++; /** or questionCount + 100; */
+const questionIndex = Math.floor(Math.random()* questionsEasy.length);
+currentQuestion =  availableQuestions[questionIndex];
+question.innerText = currentQuestion.question;
+
+const option1 = document.getElementsByClassName("answerA");
+const option2 = document.getElementsByClassName("answerB");
+const option3 = document.getElementsByClassName("answerC");
+
+    option1.innerText = currentQuestion.answerA;
+    option2.innerText = currentQuestion.answerB;
+    option3.innerText = currentQuestion.answerC;
+    
+
+availableQuestions.splice(questionIndex, 1); 
+
+acceptingAnswers = true;
+}
+
+
+
+
+runGame ();
 
 /**
  * Displays Name of Player on first page and last page, after having submitted a name
  */
-function textWithName() {
-    const inputBox = document.getElementById("input-name");
-    const firstName = document.getElementById("name");
-    const displayFirstName = document.getElementById("show-name");
-
-    inputBox.addEventListener("input", displayName);
-    
-    function displayName(firstName) {
-        getAttribute(inputBox, firstName);
-        setAttribute("id", displayFirstName).textContent(`Hello ${firstName}!`);
-        return (displayFirstName.style.display = "block");
-    }
-}
-
-const questionElement = document.getElementById("question");
-const answerButton = document.getElementsByClassName("button-answer");
-const nextButton = document.getElementById("button-next");
-
-let questionIndex = 0;
-let score = 0;
-let questionCount = 0;
-
-function runGame() {
-    questionIndex = 0;
-    score = 0;
-    nextButton.innerHTML = "Next";
-    showQuestion();
-}
-
-var newQuestion = Math.floor(Math.random()*length.questionsEasy) + 1[questionIndex];
-
-function showQuestion() {
-    questionElement.innerHTML = newQuestion.questionsEasy;
-
-    newQuestion.answers.forEach(answer => {
-        const buttonAnswer = document.createElement("button-answer");
-        buttonAnswer.textContent = answers.text;
-        buttonAnswer.classList.add("button-answer");
-        answerButton.appendChild(buttonAnswer);
-        buttonAnswer.addEventListener ("click", selectAnswer);  
-    }); 
-} 
-
-
-function selectAnswer (e) {
-    const selectedButton = e.target;
-    const isCorrect = selectedButton.dataset.correct === "true";
-    if (isCorrect) {
-        selectedButton.classList.add("correct");
-    } else {
-            selectedButton.classList.add("incorrect");
-        }
-        buttonAnswer.disabled =  true;
-        nextButton.style.display = "block";
-    }
-
-function chooseLevel() {
-    let buttonsLevel = document.getElementByTagName("btn-level");
-    
-    for (let button of buttonsLevel) {
-        button.addEventListener("click", function(){
-            let gameLevel = this.getAttribute("data-type");
-            runGame(gameLevel);
-        })
-    } 
-   
-}
-
-function nextButtonClick (){
-    questionIndex++;
-    /**total amount of questions=10**/
-    showQuestion();
-}
-
-
