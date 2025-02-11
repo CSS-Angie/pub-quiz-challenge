@@ -1,13 +1,4 @@
 
-const question = document.getElementById("question");
-const answers = Array.from(document.getElementsByClassName("button-answer"));
-
-let currentQuestion = {};
-let acceptingAnswers = true;
-let score = 0;
-let questionCount = 0;
-let availableQuestions = [];
-
 let questionsEasy = [ 
     {
         question: "Who was the first Disney character created by Walt Disney?",
@@ -276,17 +267,4 @@ let questionsEasy = [
         correct: 1
     }
 ]
-
-const scoreCorrect = 100;
-const maxQuestions = 10;
-
-runGame ();
-
-runGame = () => {
-    questionCount = 0;
-    score = 0;
-    availableQuestions = [...questionsEasy];
-    console.log(availableQuestions);
-}
-
 
