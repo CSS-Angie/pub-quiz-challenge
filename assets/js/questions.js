@@ -2,269 +2,193 @@
 let questionsEasy = [ 
     {
         question: "Who was the first Disney character created by Walt Disney?",
-        answer1: "Alladin ", 
-        answer2: "Donald Duck", 
-        answer3: "Mickey Mouse",
-        correct: 3
+        answers: ["Alladin ", "Donald Duck", "Mickey Mouse",],
+        correct: "Mickey Mouse",
     },
     {
         question: "Which painting is also known as La Joconde?",
-        answer1: "Girl with the pearl earring", 
-        answer2: "Mona Lisa", 
-        answer3: "Woman with a mirror", 
-        correct: 2
+        answers: ["Girl with the pearl earring", "Mona Lisa", "Woman with a mirror",],
+        correct: "Mona Lisa",
     },
     {
         question: "Who sings Poker Face?",
-        answer1: "Lady Gaga", 
-        answer2: "Madonna ", 
-        answer3: "Taylor Swift", 
-        correct: 1
+        answers: ["Lady Gaga", "Madonna ", "Taylor Swift",],
+        correct: "Lady Gaga",
     },
     {
         question: "What are the names of Cinderella’s evil stepsisters?",
-        answer1: "Anastasia and Drizella", 
-        answer2: "Gizelle and Anabelle", 
-        answer3: "Florence and Marge", 
-        correct: 1
+        answers: ["Anastasia and Drizella", "Gizelle and Anabelle", "Florence and Marge",],
+        correct: "Anastasia and Drizella",
     },
     {
         question: "Which College Is Elle Applying for In Legally Blonde?",
-        answer1: "Yale", 
-        answer2: "Harvard", 
-        answer3: "Princeton", 
-        correct: 2
+        answers: ["Yale", "Harvard", "Princeton",] ,
+        correct: "Harvard",
     },
     {
         question: "What’s the name of the sword in The Sword In The Stone?",
-        answer1: "Glamdring", 
-        answer2: "Callandor", 
-        answer3: "Excalibur", 
-        correct: 3
+        answers: ["Glamdring", "Callandor", "Excalibur",],
+        correct:  "Excalibur",
     },
     {
         question: "Stark Industries is associated with which fictonal superhero?",
-        answer1: "Iron Man", 
-        answer2: "Iron Fist", 
-        answer3: "Captain America", 
-        correct: 1
+        answers: ["Iron Man", "Iron Fist", "Captain America",],
+        correct: "Iron Man",
     },
     {
         question: "Which Museum Is Featured In Night at the Museum?",
-        answer1: "Museum of Natural History", 
-        answer2: "The Smithsonian", 
-        answer3: "National Museum of the American Indian", 
-        correct: 1
+        answers: ["Museum of Natural History", "The Smithsonian", "National Museum of the American Indian",],
+        correct: "Museum of Natural History",
     },
     {
         question: "The Playstation game console was developed by which company?",
-        answer1: "Nintendo",
-        answer2: "Sega",
-        answer3: "Sony", 
-        correct: 3
+        answers: ["Nintendo", "Sega", "Sony",],
+        correct: "Sony",
     },
     {
         question: "Which part of his body did Charlie Chaplin insure?",
-        answer1: "Moustache ",
-        answer2: "Hands ",
-        answer3: "Feet ", 
-        correct: 3
+        answers: ["Moustache ", "Hands ", "Feet ",],
+        correct: "Feet ",
     },
     {
         question: "What is the name of the element with the chemical symbol ‘He’?",
-        answer1: "Helium",
-        answer2: "Hydrogen",
-        answer3: "Holmium", 
-        correct: 1
+        answers: ["Helium", "Hydrogen", "Holmium",],
+        correct: "Helium",
     },
     {
         question: "Which animal can be seen on the Porsche logo?",
-        answer1: "Cougar",
-        answer2: "Horse",
-        answer3: "Cheetah", 
-        correct: 2
+        answers: ["Cougar", "Horse", "Cheetah",],
+        correct: "Horse",
     },
     {
         question: "What type of scientist studies living plants?",
-        answer1: "Paleontologist",
-        answer2: "Entomologist",
-        answer3: "Botanist", 
-        correct: 3
+        answers: ["Paleontologist", "Entomologist", "Botanist",],
+        correct: "Botanist",
     },
     {
         question: "What do you call traditional Japanese female entertainers who act as hostesses and whose skills include performing various Japanese arts?",
-        answer1: "Hakama",
-        answer2: "Geisha",
-        answer3: "Maiko ", 
-        correct: 2
+        answers: ["Hakama", "Geisha", "Maiko ",],
+        correct: "Geisha",
     },
     {
         question: "The Aztecs even used cocoa beans as what?",
-        answer1: "Currency",
-        answer2: "Drugs",
-        answer3: "Weapon decorations", 
-        correct: 1
+        answers: ["Currency", "Drugs", "Weapon decorations",],
+        correct: "Currency",
     },
     {
         question: "'Mama Mia' is based on a song by which Swedish musical act?",
-        answer1: "	ABBA",
-        answer2: "	Bee Gees",
-        answer3: "	Queen", 
-        correct: 1
+        answers: ["ABBA", "Bee Gees", "Queen",],
+        correct: "ABBA",
     },
     {
         question: "	In Norse mythology, what is Thor the God of?",
-        answer1: "Rain",
-        answer2: "Dancing",
-        answer3: "Thunder", 
-        correct: 3
+        answers: ["Rain", "Dancing", "Thunder",],
+        correct: "Thunder",
     },
     {
         question: "Where is the Great Wall Located?",
-        answer1: "China",
-        answer2: "South Korea",
-        answer3: "North Korea", 
-        correct: 1
+        answers: ["China", "South Korea", "North Korea",],
+        correct: "China",
     },
     {
         question: "Mr. Pibb was a soft drink created by the Coca-Cola Company to compete with what other soft drink?",
-        answer1: "Cherry Cola",
-        answer2: "Dr. Pepper",
-        answer3: "Root beer", 
-        correct: 2
+        answers: ["Cherry Cola", "Dr. Pepper", "Root beer",],
+        correct: "Dr. Pepper",
     },
     {
         question: "Who was married to John F. Kenedy and was first lady from 1961 until 1963?",
-        answer1: "Michelle LaVaughn Robinson Kenedy",
-        answer2: "Eleanor Kenedy",
-        answer3: "Jacqueline Kennedy Onassis", 
-        correct: 3
+        answers: ["Michelle LaVaughn Robinson Kenedy", "Eleanor Kenedy", "Jacqueline Kennedy Onassis",],
+        correct: "Jacqueline Kennedy Onassis",
     },
     {
         question: "What year did the Chernobyl disaster occur?",
-        answer1: "1986",
-        answer2: "1984",
-        answer3: "1985", 
-        correct: 1
+        answers: ["1986", "1984", "1985",],
+        correct: "1986",
     },
     {
         question: "A Blue Whale has a heart roughly the size of a what?",
-        answer1: "VW Beetle",
-        answer2: "Basketball",
-        answer3: "Grapefruit", 
-        correct: 1
+        answers: ["VW Beetle", "Basketball", "Grapefruit",],
+        correct: "VW Beetle",
     },
     {
         question: "Which country flag, nicknamed “The Maple Leaf’ consists of a red field with a white square and features a red maple leaf at its center?",
-        answer1: "Turkey",
-        answer2: "Canada",
-        answer3: "Colombia", 
-        correct: 2
+        answers: ["Turkey", "Canada", "Colombia",],
+        correct: "Canada",
     },
     {
         question: "How would Groot answer this question?",
-        answer1: "YO homie whats up!",
-        answer2: "I am groot",
-        answer3: "Groot I am young padawan", 
-        correct: 2
+        answers: ["YO homie whats up!", "I am groot", "Groot I am young padawan",],
+        correct: "I am groot",
     },
     {
         question: "What did Aladdin steal in the marketplace at the beginning of “Aladdin”?",
-        answer1: "Apple",
-        answer2: "Gold",
-        answer3: "Bread", 
-        correct: 3
+        answers: ["Apple", "Gold", "Bread",],
+        correct: "Bread",
     },
     {
         question: "What popular beverage once contained cocaine?",
-        answer1: "Coca-Cola",
-        answer2: "Schweppes",
-        answer3: "Dr Pepper", 
-        correct: 1
+        answers: ["Coca-Cola", "Schweppes", "Dr Pepper",],
+        correct: "Coca-Cola",
     },
     {
         question: "Henry John Heinz founded a company specializing in the production of which food product?",
-        answer1: "Mustard",
-        answer2: "Ketchup",
-        answer3: "Relish", 
-        correct: 2
+        answers: ["Mustard", "Ketchup", "Relish",],
+        correct: "Ketchup",
     },
     {
         question: "What is the primary ingredient in guacamole?",
-        answer1: "Tomato",
-        answer2: "Pineapple",
-        answer3: "Avocado", 
-        correct: 3
+        answers: ["Tomato", "Pineapple", "Avocado",],
+        correct: "Avocado",
     },
     {
         question: "Which animal is, according to the New York times, by far the most expensive animal to keep in a zoo?",
-        answer1: "Hippo",
-        answer2: "Elephant",
-        answer3: "Giant panda", 
-        correct: 3
+        answers: ["Hippo", "Elephant", "Giant panda",],
+        correct: "Giant panda",
     },
     {
         question: "Which is an Icelandic traditional dish?",
-        answer1: "Sheep’s head",
-        answer2: "Rugbrød",
-        answer3: "Lutefisk", 
-        correct: 1
+        answers: ["Sheep’s head", "Rugbrød", "Lutefisk",],
+        correct: "Sheep’s head",
     },
     {
         question: "Which country does gouda cheese come from?",
-        answer1: "Belgium",
-        answer2: "Switzerland",
-        answer3: "Netherlands", 
-        correct: 3
+        answers: ["Belgium", "Switzerland", "Netherlands",],
+        correct: "Netherlands",
     },
     {
         question: "Worldwide, what is the third most popular drink?",
-        answer1: "Beer",
-        answer2: "Water",
-        answer3: "Coffee", 
-        correct: 1
+        answers: ["Beer", "Water", "Coffee",],
+        correct: "Beer",
     },
     {
         question: "What is Mickey Mouses dog called?",
-        answer1: "Bruce",
-        answer2: "Jude",
-        answer3: "Pluto", 
-        correct: 3
+        answers: ["Bruce", "Jude", "Pluto",],
+        correct: "Pluto", 
     },
     {
         question: "What are Santa’s little helpers called?",
-        answer1: "Gremlins",
-        answer2: "Elves",
-        answer3: "Little People", 
-        correct: 2
+        answers: ["Gremlins", "Elves", "Little People",],
+        correct: "Elves",
     },
     {
         question: "In the following which one food Giant Pandas normally eat?",
-        answer1: "Bamboo",
-        answer2: "Corn",
-        answer3: "Fish", 
-        correct: 1
+        answers: ["Bamboo", "Corn", "Fish",],
+        correct: "Bamboo",
     },
     {
         question: "In the movie Finding Nemo, which country has Nemo been taken to?",
-        answer1: "England",
-        answer2: "Australia",
-        answer3: "New Zealand", 
-        correct: 2
+        answers: ["England", "Australia", "New Zealand",],
+        correct: "Australia",
     },
     {
         question: "What type of animals pull Santa’s sleigh?",
-        answer1: "Dogs",
-        answer2: "Horses",
-        answer3: "Reindeer", 
-        correct: 3
+        answers: ["Dogs", "Horses", "Reindeer",],
+        correct: "Reindeer",
     },
     {
         question: "What color is the Grinch, who stole Christmas?",
-        answer1: "Green",
-        answer2: "Blue",
-        answer3: "Brown", 
-        correct: 1
+        answers: ["Green", "Blue", "Brown",],
+        correct: "Green",
     }
 ]
 
