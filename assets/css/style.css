@@ -218,12 +218,12 @@ footer p {
 
 #image-area  {
     display: block; 
-    margin-bottom:2rem;
+    margin-bottom:1rem;
 }
 
 #image-area img {
     border: var(--contrast-color) 5px solid;
-    max-width:90%;
+    max-width:80%;
     background-color: var(--contrast-color);
 }
 
@@ -316,10 +316,11 @@ footer p {
     #hero .title {
         font-size: 5rem;
     }
-
     .input-name {
         width: 45%;
 }
+#image-area img {
+    max-width:50%;
 }
 
 @media only screen and (min-width: 1280px) {

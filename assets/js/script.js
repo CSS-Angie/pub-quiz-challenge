@@ -219,11 +219,11 @@ runGame = () => {
     questionCount = 0;
     score = 0;
     availableQuestions = [...questionsEasy];
-    /**console.log(availableQuestions);*/
+    
     NewQuestion();
 }
 
-/**New question is generated from the array */
+/**New question is generated and displayed from the array */
 NewQuestion = () => {
 const questionIndex = Math.floor(Math.random()* questionsEasy.length);
 
@@ -237,7 +237,7 @@ const AnswerC = document.getElementById("AnswerC");
 AnswerA.innerHTML=questionsEasy[questionIndex].answers[0];
 AnswerB.innerHTML=questionsEasy[questionIndex].answers[1];
 AnswerC.innerHTML=questionsEasy[questionIndex].answers[2];
-
+console.log(currentQuestion);
 acceptingAnswers = true;
 checkAnswer();
 
@@ -249,11 +249,11 @@ availableQuestions.splice(questionIndex, 1);
 /**
  * checking the correctness of answer after clicking it
  */
-answerButtons.array.forEach(button => {
-        button.addEventListener("click", function() {
-            checkAnswer(button.textContent);
+answerButtons.forEach(answerButton) {
+        answerButton.addEventListener("click", e => {
+            checkAnswer(anwserButton.textContent);
 
-            questionCount++; /** or questionCount + 100; */
+            questionCount + 1;
         
     if (questionIndex <= maxQuestions) {
         return NewQuestion ();
@@ -273,8 +273,10 @@ function checkAnswer(selectedAnswer) {
 
     if (selectedAnswer === correctAnswer) {
         incrementScore(); 
+        selectedAnswer.classList.add("correct");
     } else {
         score (0);
+        selectedAnswer.classList.add("incorrect")
 
     };
 }
@@ -288,7 +290,7 @@ function incrementScore () {
  * show score at the the end
  */
 function showScore() {
-        
+
 }
 
 
