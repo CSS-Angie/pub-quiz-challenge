@@ -56,5 +56,3 @@ function nextButtonClick (){
     /**total amount of questions=10**/
     showQuestion();
 }
-
-

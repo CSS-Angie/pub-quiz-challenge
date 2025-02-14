@@ -260,14 +260,11 @@ NewQuestion = () => {
 
 /** display question */
 const questionIndex = Math.floor(Math.random()* questionsEasy.length);
-
 const currentQuestion =  availableQuestions[questionIndex];
-question.innerText = currentQuestion.question;
 
+question.innerText = currentQuestion.question;
 /** display image */
-function displayImage () {
-    document.getElementById("image-area").queryselector("img").src = currentQuestion.imgSrc;
-}
+displayImage(currentQuestion.imgSrc);
 
 /** display answer */
 const answerA = document.getElementById("answerA");
@@ -280,12 +277,19 @@ answerC.innerHTML=currentQuestion.answers[2];
 
 console.log(currentQuestion);
 acceptingAnswers = true;
-checkAnswer();
 
 availableQuestions.splice(questionIndex, 1); 
-
-
 }
+
+function displayImage (imgSrc) {
+    document.getElementById("image-area").querySelector("img").src = imgSrc;
+}
+
+answerButtons.forEach(answerButton => {
+    answerButton.addEventListener("click", e => {
+        checkAnswer(selectedAnswer, questionIndex);
+    });
+});
 
 /**
  * checking the correctness of answer after clicking it 
@@ -293,32 +297,24 @@ availableQuestions.splice(questionIndex, 1);
 function checkAnswer(selectedAnswer) {
     let correctAnswer = questionsEasy[questionIndex].correct;
 
-    answerButtons.forEach(answerButton => {
-        answerButton.addEventListener("click", e => {
-            checkAnswer(answerButton.textContent);
-
-            questionCount += 1;
-        
-    if (questionIndex < maxQuestions) {
-        return NewQuestion();
-    } else {
-        showScore();
-    }}
-)
-});
-
     if (selectedAnswer === correctAnswer) {
         incrementScore(); 
         answerButton.classList.add("correct");
     } else {
         score (0);
         answerButton.classList.add("incorrect")
-
     };
+
+    questionCount += 1;
+        
+    if (questionIndex < maxQuestions) {
+        return NewQuestion();
+    } else {
+        showScore();
+    }
 }
 
 /** counts up when answer is correct */
-
 function incrementScore () {
         let finalScore = parseInt(document.getElementById("final-score").innerText);
         document.getElementById("final-score").textContent = finalScoreScore + 100;
