@@ -137,11 +137,6 @@ a {
     align-items: flex-end;
 }
 
-p .choose {
-    text-align: center;
-
-}
-
 #level-area .btn-level {
     display: flex;
     flex-direction: row;
@@ -154,7 +149,6 @@ p .choose {
     margin-left: 1rem;
     letter-spacing: 2px;
     font-size: 1.2rem;
-    
 }
 
 #level-area .btn-level:hover {
@@ -183,6 +177,10 @@ p .choose {
     background-color: var(--primary-color);
 }
 
+.choose {
+    text-align: center;
+}
+
 footer {
     margin-top: auto;
     background-color: var(--contrast-color);
@@ -209,11 +207,6 @@ footer p {
 .header-questionpage {
     font-size: medium;
     font-weight: lighter;
-}
-
-
-#question {
-    
 }
 
 #image-area  {
@@ -318,9 +311,10 @@ footer p {
     }
     .input-name {
         width: 45%;
-}
+    }
 #image-area img {
     max-width:50%;
+    }
 }
 
 @media only screen and (min-width: 1280px) {
