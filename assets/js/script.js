@@ -272,7 +272,7 @@ const answerB = document.getElementById("answerB");
 const answerC = document.getElementById("answerC");
 
 answerA.innerHTML=currentQuestion.answers[0];
-    consolee.log(currentQuestion.answerA);
+    console.log(currentQuestion.answerA);
 answerB.innerHTML=currentQuestion.answers[1];
 answerC.innerHTML=currentQuestion.answers[2];
 
