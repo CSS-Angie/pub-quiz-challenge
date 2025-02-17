@@ -270,10 +270,10 @@ const answerA = document.getElementById("answerA");
 const answerB = document.getElementById("answerB");
 const answerC = document.getElementById("answerC");
 
-answerA.textContent = currentQuestion.answers[0];
-console.log(currentQuestion.answerA);
-answerB.textContent = currentQuestion.answers[1];
-answerC.textContent = currentQuestion.answers[2];
+answerA.innerHTML=currentQuestion.answers[0];
+    console.log(currentQuestion.answerA);
+answerB.innerHTML=currentQuestion.answers[1];
+answerC.innerHTML=currentQuestion.answers[2];
 
 console.log(currentQuestion);
 acceptingAnswers = true;
