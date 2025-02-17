@@ -1,4 +1,4 @@
-/** questions for Novice */
+// questions for Novice
 
 let questionsEasy = [ 
     {
@@ -226,26 +226,24 @@ let questionsEasy = [
 ]
 
 
-/** questions for Experienced */    
+// questions for Experienced 
 
 
-/** questions for Expert*/
+// questions for Expert
 
 
-/** Constants and variables */
-const answerButtons = document.getElementsByClassName("button-answer"); 
+// Constants and variables
+const answerButtons = document.querySelectorAll("button-answer"); 
 const nextButton = document.getElementById("button-next");
 const scoreCorrect = 100;
 const maxQuestions = 10;
-/**const answers = Array.from(document.getElementsByClassName("button-answer"));*/
 
 let acceptingAnswers = true;
 let score = 0;
-let questionCount = 0;
+let questionCount = 6;
 let availableQuestions = [];
 
-
-/** Runs the game */
+// Runs the game 
 runGame = () => {
     questionCount = 0;
     score = 0;
@@ -254,26 +252,28 @@ runGame = () => {
     NewQuestion();
 }
 
-/**New question is generated and displayed from the array */
+// New question is generated and displayed from the array
 
 NewQuestion = () => {
 
-/** display question */
+// display question 
 const questionIndex = Math.floor(Math.random()* questionsEasy.length);
 const currentQuestion =  availableQuestions[questionIndex];
 
-question.innerText = currentQuestion.question;
-/** display image */
+question = document.getElementById('question');
+question.textContent = currentQuestion.question;
+// display image 
 displayImage(currentQuestion.imgSrc);
 
-/** display answer */
+// display possible answers 
 const answerA = document.getElementById("answerA");
 const answerB = document.getElementById("answerB");
 const answerC = document.getElementById("answerC");
 
-answerA.innerHTML=currentQuestion.answers[0];
-answerB.innerHTML=currentQuestion.answers[1];
-answerC.innerHTML=currentQuestion.answers[2];
+answerA.textContent = currentQuestion.answers[0];
+console.log(currentQuestion.answerA);
+answerB.textContent = currentQuestion.answers[1];
+answerC.textContent = currentQuestion.answers[2];
 
 console.log(currentQuestion);
 acceptingAnswers = true;
@@ -285,16 +285,17 @@ function displayImage (imgSrc) {
     document.getElementById("image-area").querySelector("img").src = imgSrc;
 }
 
+function clickAnswer(){
 answerButtons.forEach(answerButton => {
-    answerButton.addEventListener("click", e => {
+    answerButton.addEventListener("click", (selectedAnswer) => {
         checkAnswer(selectedAnswer, questionIndex);
     });
-});
+})};
 
-/**
- * checking the correctness of answer after clicking it 
- */
+// checking the correctness of answer after clicking it 
+
 function checkAnswer(selectedAnswer) {
+    clickAnswer();
     let correctAnswer = questionsEasy[questionIndex].correct;
 
     if (selectedAnswer === correctAnswer) {
@@ -306,40 +307,42 @@ function checkAnswer(selectedAnswer) {
     };
 
     questionCount += 1;
-        
-    if (questionIndex < maxQuestions) {
-        return NewQuestion();
-    } else {
-        showScore();
-    }
-}
+    setTimeout (() => {
+        selectedAnswer.classList.remove("correct");
+        selectedAnswer.classList.remove("incorrect");
 
-/** counts up when answer is correct */
+        if (questionIndex < maxQuestions) {
+            NewQuestion();
+        } else {
+            showScore();
+        };
+        1000});    
+
+// counts up when answer is correct 
 function incrementScore () {
         let finalScore = parseInt(document.getElementById("final-score").innerText);
         document.getElementById("final-score").textContent = finalScoreScore + 100;
 };
 
-/**
- * show score at the the end
- */
+// show score at the the end 
 function showScore() {
 
 }
 
+runGame();
 
+// Displays Name of Player on first page and last page, after having submitted a name
+function displayName(e){
+    e.preventDefault();
+var name = document.getElementById("input-name").value;
+displayName.getElementById("display-name").style.display ="block";
+document.getElementById("display-name").innertext = `Hello ${displayName}!`;
+};
 
-/**
- * Displays Name of Player on first page and last page, after having submitted a name
- */
+// Displays name after filling out 
 
-/** 
- * Displays name after filling out 
-*/
+// Choose level of game before starting the challenge
 
-/**
- * Choose level of game before starting the challenge
- */
 /** 
 document.addEventListener("DOMContentLoaded", function() {
     let buttonsLevels = document.getElementsByTagName("btn-level");
@@ -379,5 +382,4 @@ document.addEventListener("DOMContentLoaded", function() {
             })
                 */
 
-
-
+}

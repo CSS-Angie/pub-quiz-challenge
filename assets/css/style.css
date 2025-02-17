@@ -124,8 +124,8 @@ a {
     font-size:larger;
 }
 
-#show-name {
-    display: none;
+#display-name {
+    display:none;
 }
 
 #level-area {
@@ -197,6 +197,25 @@ footer p {
 /* CSS Page the-pub-quiz-challenge
 */
 
+#total-questions {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+
+#total-questions span {
+    width: 100%;
+    height: 4px;
+    border-radius:25%;
+    background-color: var(--secondary-color);
+}
+
+#total-questions .seen {
+    background-color: var(--secondary-contrast-color);
+} 
+
+}
 #question-area {
     display:flex;
     flex-direction: column;
