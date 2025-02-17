@@ -124,10 +124,6 @@ a {
     font-size:larger;
 }
 
-#display-name {
-    display:none;
-}
-
 #level-area {
     display: flex;
     flex-direction: column;
@@ -137,7 +133,16 @@ a {
     align-items: flex-end;
 }
 
-#level-area .btn-level {
+
+.choose {
+    display: flex ;
+    flex-direction: row;
+    width: 90%;
+    justify-content: center;
+}
+
+#level-area .btn-level,
+#confirm-name .btn-level {
     display: flex;
     flex-direction: row;
     padding: 1rem;
@@ -151,7 +156,8 @@ a {
     font-size: 1.2rem;
 }
 
-#level-area .btn-level:hover {
+#level-area .btn-level:hover,
+#confirm-name .btn-level:hover {
     cursor: pointer;
     background-color: var(--secondary-color);
     transition: 0.3s;
@@ -177,10 +183,6 @@ a {
     background-color: var(--primary-color);
 }
 
-.choose {
-    text-align: center;
-}
-
 footer {
     margin-top: auto;
     background-color: var(--contrast-color);
@@ -197,7 +199,7 @@ footer p {
 /* CSS Page the-pub-quiz-challenge
 */
 
-#total-questions {
+/*#total-questions {
     width: 100%;
     padding: 1rem;
     display: flex;
@@ -214,8 +216,8 @@ footer p {
 #total-questions .seen {
     background-color: var(--secondary-contrast-color);
 } 
+*/
 
-}
 #question-area {
     display:flex;
     flex-direction: column;

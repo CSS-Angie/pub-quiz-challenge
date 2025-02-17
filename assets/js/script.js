@@ -223,7 +223,7 @@ let questionsEasy = [
         answers: ["Green", "Blue", "Brown",],
         correct: "Green",
     }
-]
+];
 
 
 // questions for Experienced 
@@ -240,7 +240,7 @@ const maxQuestions = 10;
 
 let acceptingAnswers = true;
 let score = 0;
-let questionCount = 6;
+let questionCount = 0;
 let availableQuestions = [];
 
 // Runs the game 
@@ -250,7 +250,7 @@ runGame = () => {
     availableQuestions = [...questionsEasy];
     
     NewQuestion();
-}
+};
 
 // New question is generated and displayed from the array
 
@@ -279,7 +279,7 @@ console.log(currentQuestion);
 acceptingAnswers = true;
 
 availableQuestions.splice(questionIndex, 1); 
-}
+};
 
 function displayImage (imgSrc) {
     document.getElementById("image-area").querySelector("img").src = imgSrc;
@@ -290,7 +290,7 @@ answerButtons.forEach(answerButton => {
     answerButton.addEventListener("click", (selectedAnswer) => {
         checkAnswer(selectedAnswer, questionIndex);
     });
-})};
+});}
 
 // checking the correctness of answer after clicking it 
 
@@ -303,11 +303,14 @@ function checkAnswer(selectedAnswer) {
         answerButton.classList.add("correct");
     } else {
         score (0);
-        answerButton.classList.add("incorrect")
-    };
+        answerButton.classList.add("incorrect");
+    }
 
     questionCount += 1;
-    setTimeout (() => {
+
+    const timeout = setTimeout (delayToNextQuestion, 1000);
+    
+    function delayToNextQuestion() {
         selectedAnswer.classList.remove("correct");
         selectedAnswer.classList.remove("incorrect");
 
@@ -315,8 +318,9 @@ function checkAnswer(selectedAnswer) {
             NewQuestion();
         } else {
             showScore();
-        };
-        1000});    
+        }
+    }
+            
 
 // counts up when answer is correct 
 function incrementScore () {
@@ -332,14 +336,21 @@ function showScore() {
 runGame();
 
 // Displays Name of Player on first page and last page, after having submitted a name
+var inputName = document.getElementById("input-name").value;
+
+
 function displayName(e){
     e.preventDefault();
-var name = document.getElementById("input-name").value;
-displayName.getElementById("display-name").style.display ="block";
+var displayName = inputName.value;
+    displayName.getElementById("display-name").style.display ="block";
 document.getElementById("display-name").innertext = `Hello ${displayName}!`;
 };
 
-// Displays name after filling out 
+//Name in local storage for last page
+/**localStorage.setItem(inputName, value);
+local
+document.getElementById("display-name").innerHTML = localStorage.getItem("input-name");
+*/
 
 // Choose level of game before starting the challenge
 
