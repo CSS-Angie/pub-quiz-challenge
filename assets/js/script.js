@@ -233,7 +233,7 @@ let questionsEasy = [
 
 
 /** Constants and variables */
-const answerButtons = document.getElementsByClassName("button-answer"); 
+const answerButtons = document.querySelectorAll("button-answer"); 
 const nextButton = document.getElementById("button-next");
 const scoreCorrect = 100;
 const maxQuestions = 10;
@@ -261,7 +261,7 @@ NewQuestion = () => {
 /** display question */
 const questionIndex = Math.floor(Math.random()* questionsEasy.length);
 const currentQuestion =  availableQuestions[questionIndex];
-
+question = document.getElementById("question");
 question.innerText = currentQuestion.question;
 /** display image */
 displayImage(currentQuestion.imgSrc);
@@ -272,6 +272,7 @@ const answerB = document.getElementById("answerB");
 const answerC = document.getElementById("answerC");
 
 answerA.innerHTML=currentQuestion.answers[0];
+    consolee.log(currentQuestion.answerA);
 answerB.innerHTML=currentQuestion.answers[1];
 answerC.innerHTML=currentQuestion.answers[2];
 
@@ -308,7 +309,7 @@ function checkAnswer(selectedAnswer) {
     questionCount += 1;
         
     if (questionIndex < maxQuestions) {
-        return NewQuestion();
+        NewQuestion();
     } else {
         showScore();
     }
