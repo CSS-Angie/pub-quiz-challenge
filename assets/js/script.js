@@ -235,16 +235,17 @@ let questionsEasy = [
 // Constants and variables
 const answerButtons = document.querySelectorAll("button-answer"); 
 const nextButton = document.getElementById("button-next");
+const question = document.getElementById("question");
 const scoreCorrect = 100;
 const maxQuestions = 10;
-
+let currentQuestion = {};
 let acceptingAnswers = true;
 let score = 0;
 let questionCount = 0;
 let availableQuestions = [];
 
 // Runs the game 
-runGame = () => {
+function runGame() {
     questionCount = 0;
     score = 0;
     availableQuestions = [...questionsEasy];
@@ -254,14 +255,15 @@ runGame = () => {
 
 // New question is generated and displayed from the array
 
-NewQuestion = () => {
+function NewQuestion() {
 
 // display question 
 const questionIndex = Math.floor(Math.random()* questionsEasy.length);
 const currentQuestion =  availableQuestions[questionIndex];
 
 question = document.getElementById('question');
-question.textContent = currentQuestion.question;
+question.innerHTML = currentQuestion.question;
+console.log(currentQuestion.question);
 // display image 
 displayImage(currentQuestion.imgSrc);
 
@@ -273,9 +275,10 @@ const answerC = document.getElementById("answerC");
 answerA.innerHTML=currentQuestion.answers[0];
     console.log(currentQuestion.answerA);
 answerB.innerHTML=currentQuestion.answers[1];
+    console.log(currentQuestion.answerB);
 answerC.innerHTML=currentQuestion.answers[2];
-
-console.log(currentQuestion);
+    console.log(currentQuestion.answerA);
+//console.log(currentQuestion);
 acceptingAnswers = true;
 
 availableQuestions.splice(questionIndex, 1); 
@@ -286,41 +289,43 @@ function displayImage (imgSrc) {
 }
 
 function clickAnswer(){
-answerButtons.forEach(answerButton => {
-    answerButton.addEventListener("click", (selectedAnswer) => {
-        checkAnswer(selectedAnswer, questionIndex);
+    let selectedAnswer = document.querySelectorAll("button-answer");
+
+answerButtons.forEach(answerButton =>
+    answerButton.addEventListener("click", (selectedAnswer)) {
+        checkAnswer();
     });
-});}
+};
 
 // checking the correctness of answer after clicking it 
 
 function checkAnswer(selectedAnswer) {
-    clickAnswer();
     let correctAnswer = questionsEasy[questionIndex].correct;
+    questionCount = ++1;
 
-    if (selectedAnswer === correctAnswer) {
+    if (selectedAnswer == correctAnswer) {
         incrementScore(); 
         answerButton.classList.add("correct");
+        setTimeout(1000);
     } else {
         score (0);
         answerButton.classList.add("incorrect");
+        setTimeout(2000);
     }
-
-    questionCount += 1;
-
-    const timeout = setTimeout (delayToNextQuestion, 1000);
+};
     
-    function delayToNextQuestion() {
-        selectedAnswer.classList.remove("correct");
-        selectedAnswer.classList.remove("incorrect");
+function setTimeout({
+    let answerArea = getElementById("answer-area");
+    answerArea.classList.remove("correct");
+    answerArea.classList.remove("incorrect");
 
-        if (questionIndex < maxQuestions) {
-            NewQuestion();
-        } else {
-            showScore();
-        }
-    }
-            
+    if (questionCount < maxQuestions) {
+        NewQuestion();
+    } else {
+        showScore();
+    };};
+    1000);
+
 
 // counts up when answer is correct 
 function incrementScore () {
@@ -330,7 +335,7 @@ function incrementScore () {
 
 // show score at the the end 
 function showScore() {
-
+console.log(finalScore);
 }
 
 runGame();
@@ -393,4 +398,4 @@ document.addEventListener("DOMContentLoaded", function() {
             })
                 */
 
-}
+
