@@ -235,7 +235,7 @@ let questionsEasy = [
 // Constants and variables
 const answerButtons = document.querySelectorAll("button-answer"); 
 const nextButton = document.getElementById("button-next");
-const question = document.getElementById("question");
+
 const scoreCorrect = 100;
 const maxQuestions = 10;
 let currentQuestion = {};
@@ -261,7 +261,7 @@ function NewQuestion() {
 const questionIndex = Math.floor(Math.random()* questionsEasy.length);
 const currentQuestion =  availableQuestions[questionIndex];
 
-question = document.getElementById('question');
+var question = document.getElementById('question');
 question.innerHTML = currentQuestion.question;
 console.log(currentQuestion.question);
 // display image 
@@ -288,20 +288,25 @@ function displayImage (imgSrc) {
     document.getElementById("image-area").querySelector("img").src = imgSrc;
 }
 
-function clickAnswer(){
-    let selectedAnswer = document.querySelectorAll("button-answer");
 
-answerButtons.forEach(answerButton =>
-    answerButton.addEventListener("click", (selectedAnswer)) {
-        checkAnswer();
-    });
+
+
+function clickAnswer(){
+answerButtons.forEach(answer =>
+    answer.addEventListener("click", event => {
+        if (!acceptingAnswers) return;
+        acceptingAnswers = false;
+        const selectedAnswer = selectAnswer.innerHTML;
+        const selectAnswer = event.target;
+    }));
 };
 
+//var selectAnswer = event.target;
 // checking the correctness of answer after clicking it 
 
 function checkAnswer(selectedAnswer) {
     let correctAnswer = questionsEasy[questionIndex].correct;
-    questionCount = ++1;
+    questionCount = +1;
 
     if (selectedAnswer == correctAnswer) {
         incrementScore(); 
@@ -314,23 +319,24 @@ function checkAnswer(selectedAnswer) {
     }
 };
     
-function setTimeout({
-    let answerArea = getElementById("answer-area");
-    answerArea.classList.remove("correct");
-    answerArea.classList.remove("incorrect");
+function setTimeout(){
+    var answerArea = getElementById("answer-area");
+    
+    answerArea.classList.remove("correct","incorrect");
 
     if (questionCount < maxQuestions) {
         NewQuestion();
     } else {
         showScore();
-    };};
-    1000);
+    };
+};
 
 
 // counts up when answer is correct 
 function incrementScore () {
         let finalScore = parseInt(document.getElementById("final-score").innerText);
-        document.getElementById("final-score").textContent = finalScoreScore + 100;
+
+        document.getElementById("final-score").textContent = finalScore + 100;
 };
 
 // show score at the the end 
@@ -338,10 +344,10 @@ function showScore() {
 console.log(finalScore);
 }
 
-runGame();
+
 
 // Displays Name of Player on first page and last page, after having submitted a name
-var inputName = document.getElementById("input-name").value;
+var inputName = document.getElementById("input-name");
 
 
 function displayName(e){
@@ -398,4 +404,4 @@ document.addEventListener("DOMContentLoaded", function() {
             })
                 */
 
-
+            runGame();
