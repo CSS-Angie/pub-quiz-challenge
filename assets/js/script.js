@@ -273,12 +273,9 @@ const answerB = document.getElementById("answerB");
 const answerC = document.getElementById("answerC");
 
 answerA.innerHTML=currentQuestion.answers[0];
-    console.log(currentQuestion.answerA);
 answerB.innerHTML=currentQuestion.answers[1];
-    console.log(currentQuestion.answerB);
 answerC.innerHTML=currentQuestion.answers[2];
-    console.log(currentQuestion.answerA);
-//console.log(currentQuestion);
+
 acceptingAnswers = true;
 
 availableQuestions.splice(questionIndex, 1); 
@@ -287,9 +284,6 @@ availableQuestions.splice(questionIndex, 1);
 function displayImage (imgSrc) {
     document.getElementById("image-area").querySelector("img").src = imgSrc;
 }
-
-
-
 
 function clickAnswer(){
 answerButtons.forEach(answer =>
@@ -352,8 +346,10 @@ var inputName = document.getElementById("input-name");
 
 function displayName(e){
     e.preventDefault();
-var displayName = inputName.value;
-    displayName.getElementById("display-name").style.display ="block";
+
+    var displayName = inputName.value;
+
+    displayName.getElementById("display-name").classList.remove("hidden");
 document.getElementById("display-name").innertext = `Hello ${displayName}!`;
 };
 

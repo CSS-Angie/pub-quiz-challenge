@@ -102,7 +102,9 @@ a {
     margin-bottom: 80px;
     align-items: center;
 }
-
+.hidden {
+    display: none;
+}
 .label-name {
     display: flex;
     flex-direction: row;
@@ -316,7 +318,6 @@ footer p {
 @media only screen and (min-width: 600px) {
     #hero .title {
         font-size: 3rem;
-        
     }
 }
 
@@ -339,7 +340,9 @@ footer p {
 }
 
 @media only screen and (min-width: 1280px) {
-    
+    .input-name {
+        width: 40%;
+    }
 }
 
 @media only screen and (min-width: 1440px) {
