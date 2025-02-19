@@ -285,20 +285,22 @@ function displayImage (imgSrc) {
     document.getElementById("image-area").querySelector("img").src = imgSrc;
 }
 
-// click event for answer
-function selectAnswer(){
-    const clickAnswer = e.target
-    answerButtons.forEach(function(answerButton) {
-        answerButton.addEventListener("click", e => {
-        if (!acceptingAnswers) return;
-        acceptingAnswers = false;
+/** click event for answer
+answerButtons.forEach.onclick = function () {
+    checkAnswer();
+    console.log("you clicked");
+}
 
-        console.log(clickAnswer);
- 
+function selectAnswer(){
+    const clickAnswer = new Event("clicktarget");
+
+    answerButtons.forEach(function() {
+        answerButtons.addEventListener("clicktarget", e => {
+        if (!acceptingAnswers) return;
+        acceptingAnswers = false; 
         checkAnswer(selectedAnswer);
 })});
 };
-
 
 // checking the correctness of answer after clicking it 
 function checkAnswer() {
@@ -307,16 +309,45 @@ function checkAnswer() {
 
     if (selectedAnswer == correctAnswer) {
         incrementScore(); 
-        answerButton.classList.add("correct");
+        answerButtons.classList.add("correct");
         setTimeout(1000);
     } else {
         score (0);
-        answerButton.classList.add("incorrect");
+        answerButtons.classList.add("incorrect");
         setTimeout(2000);
     }
 };
+*/
+
+answerButtons.forEach(answerButton => {
+    answerButton.addEventListener("click", e => {
+        if (!acceptingAnswers) return;
+        acceptingAnswers = false;
+
+        const selectedOption = e.target;
+        const selectedAnswer = selectedOption.innerHTML;
+
+        let classToApply = selectedAnswer === currentQuestion.answer ? 'correct' : 'incorrect';
+
+        selectedOption.parentElement.classList.add(classToApply);
+
+        setTimeout(() => {
+            selectedOption.parentElement.classList.remove(classToApply);
+            newQuestion();
+        }, 500);
+})});
+
+function classToApply() {
+    if (selectedAnswer == correctAnswer) {
+        incrementScore(); 
+        answerButtons.classList.add("correct");
+    } else {
+        score (0);
+        answerButtons.classList.add("incorrect");
+    }
+};
     
-function setTimeout(){
+/**function setTimeout(){
     var answerArea = getElementById("answer-area");
     
     answerArea.classList.remove("correct","incorrect");
@@ -325,8 +356,8 @@ function setTimeout(){
         newQuestion();
     } else {
         showScore();
-    };
-};
+    } 500;
+};*/
 
 
 // counts up when answer is correct 
@@ -343,23 +374,6 @@ console.log(finalScore);
 
 
 
-// Displays Name of Player on first page and last page, after having submitted a name
-
-const confirmName = document.getElementById("confirm");
-const inputName = document.querySelector("input");
-const displayName = document.getElementById("display-name");
-
-confirmName.addEventListener("click", () => {
-const inputValue = inputName.value;
-displayName.innerHTML = `Hello ${inputValue}!`;
-});
-
-
-//Name in local storage for last page
-/**localStorage.setItem(inputName, value);
-local
-document.getElementById("display-name").innerHTML = localStorage.getItem("input-name");
-*/
 
 // Choose level of game before starting the challenge
 
