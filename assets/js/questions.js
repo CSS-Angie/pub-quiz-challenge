@@ -30,7 +30,7 @@ let questionsEasy = [
         correct: "Harvard",
     },
     {
-        question: "What’s the name of the sword in The Sword In The Stone?",
+        question: "What’s the name of the sword in 'The Sword In The Stone?'",
         imgSrc: "../assets/images/quiz-images/swordinthestone.webp",
         answers: ["Glamdring", "Callandor", "Excalibur",],
         correct:  "Excalibur",
@@ -67,7 +67,7 @@ let questionsEasy = [
     },
     {
         question: "Which animal can be seen on the Porsche logo?",
-        imgSrc: "../assets/images/quiz-images/porsche-elvone.webp",
+        imgSrc: "../assets/images/quiz-images/porsche-evlone.webp",
         answers: ["Cougar", "Horse", "Cheetah",],
         correct: "Horse",
     },
@@ -78,7 +78,7 @@ let questionsEasy = [
         correct: "Botanist",
     },
     {
-        question: "What do you call traditional Japanese female entertainers who act as hostesses and whose skills include performing various Japanese arts?",
+        question: "What do you call traditional Japanese female entertainers; hostesses whose skills include performing various Japanese arts?",
         imgSrc: "../assets/images/quiz-images/japanese-lady.webp",
         answers: ["Hakama", "Geisha", "Maiko ",],
         correct: "Geisha",
@@ -90,26 +90,26 @@ let questionsEasy = [
         correct: "Currency",
     },
     {
-        question: "	In Norse mythology, what is Thor the God of?",
+        question: "In Norse mythology, what is Thor the God of?",
         imgSrc: "../assets/images/quiz-images/thor.webp",
         answers: ["Rain", "Dancing", "Thunder",],
         correct: "Thunder",
     },
     {
         question: "Where is the Great Wall Located?",
-        imgSrc: "../assets/images/quiz-images/thegratwall.webp",
+        imgSrc: "../assets/images/quiz-images/thegreatwall.webp",
         answers: ["China", "South Korea", "North Korea",],
         correct: "China",
     },
     {
-        question: "Mr. Pibb was a soft drink created by the Coca-Cola Company to compete with what other soft drink?",
+        question: "Mr. Pibb was a soft drink created by the Coca-Cola Company to compete with?",
         imgSrc: "../assets/images/quiz-images/mrpibb.webp",
         answers: ["Cherry Cola", "Dr. Pepper", "Root beer",],
         correct: "Dr. Pepper",
     },
     {
         question: "Who was married to John F. Kenedy and was first lady from 1961 until 1963?",
-        imgSrc: "../assets/images/quiz-images/jkfandwife.webp",
+        imgSrc: "../assets/images/quiz-images/jfkandwife.webp",
         answers: ["Michelle LaVaughn Robinson Kenedy", "Eleanor Kenedy", "Jacqueline Kennedy Onassis",],
         correct: "Jacqueline Kennedy Onassis",
     },
@@ -126,7 +126,7 @@ let questionsEasy = [
         correct: "VW Beetle",
     },
     {
-        question: "Which country flag, nicknamed “The Maple Leaf’ consists of a red field with a white square and features a red maple leaf at its center?",
+        question: "Which country owns this flag, nicknamed “The Maple Leaf’?",
         imgSrc: "../assets/images/quiz-images/maple-leaf-flag.webp",
         answers: ["Turkey", "Canada", "Colombia",],
         correct: "Canada",
@@ -162,7 +162,7 @@ let questionsEasy = [
         correct: "Avocado",
     },
     {
-        question: "Which animal is, according to the New York times, by far the most expensive animal to keep in a zoo?",
+        question: "Which animal is, according to the NY Times, by far the most expensive animal to keep in a zoo?",
         imgSrc: "../assets/images/quiz-images/zoo.webp",
         answers: ["Hippo", "Elephant", "Giant panda",],
         correct: "Giant panda",
@@ -204,7 +204,7 @@ let questionsEasy = [
         correct: "Bamboo",
     },
     {
-        question: "In the movie Finding Nemo, which country has Nemo been taken to?",
+        question: "In 'Finding Nemo', which country has Nemo been taken to?",
         imgSrc: "../assets/images/quiz-images/nemo.webp",
         answers: ["England", "Australia", "New Zealand",],
         correct: "Australia",
