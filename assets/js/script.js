@@ -286,19 +286,17 @@ function displayImage (imgSrc) {
 }
 
 // click event for answer
-function clickAnswer(){
-    currentQuestion.answerButtons.forEach(answerButton =>
-        answerButton.addEventListener("click", selectAnswer => {
+function selectAnswer(){
+    const clickAnswer = e.target
+    answerButtons.forEach(function(answerButton) {
+        answerButton.addEventListener("click", e => {
         if (!acceptingAnswers) return;
         acceptingAnswers = false;
-        var selectAnswer = answerButton.target;
-        var selectedAnswer = selectAnswer.dataset("");
-        
-        answerButton.onclick=function(e) {
-            this.style.borderStyle = (this.style.borderStyle!=='inset' ? 'inset' : 'outset'); 
-        }
+
+        console.log(clickAnswer);
+ 
         checkAnswer(selectedAnswer);
-    }));
+})});
 };
 
 
@@ -346,17 +344,16 @@ console.log(finalScore);
 
 
 // Displays Name of Player on first page and last page, after having submitted a name
-var inputName = document.getElementById("input-name");
 
+const confirmName = document.getElementById("confirm");
+const inputName = document.querySelector("input");
+const displayName = document.getElementById("display-name");
 
-function displayName(e){
-    e.preventDefault();
+confirmName.addEventListener("click", () => {
+const inputValue = inputName.value;
+displayName.innerHTML = `Hello ${inputValue}!`;
+});
 
-    var displayName = inputName.value;
-
-    displayName.getElementById("display-name").classList.remove("hidden");
-document.getElementById("display-name").innertext = `Hello ${displayName}!`;
-};
 
 //Name in local storage for last page
 /**localStorage.setItem(inputName, value);
