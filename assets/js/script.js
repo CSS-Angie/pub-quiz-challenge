@@ -3,37 +3,37 @@
 let questionsEasy = [ 
     {
         question: "Who was the first Disney character created by Walt Disney?",
-        imgSrc: "../quiz-images/mickey-and-friends.webp",
+        imgSrc: "assets/images/quiz-images/mickey-and-friends.webp",
         answers: ["Alladin ", "Donald Duck", "Mickey Mouse",],
         correct: "Mickey Mouse",
     },
     {
         question: "Which painting is also known as La Joconde?",
-        imgSrc: "quiz-images/joconde.webp",
+        imgSrc: "assets/images/quiz-images/joconde.webp",
         answers: ["Girl with the pearl earring", "Mona Lisa", "Woman with a mirror",],
         correct: "Mona Lisa",
     },
     {
         question: "Who sings Poker Face?",
-        imgSrc: "../quiz-images/pokerface.webp",
+        imgSrc: "assets/images/quiz-images/pokerface.webp",
         answers: ["Lady Gaga", "Madonna ", "Taylor Swift",],
         correct: "Lady Gaga",
     },
     {
         question: "What are the names of Cinderella’s evil stepsisters?",
-        imgSrc: "quiz-images/cinderella.webp",
+        imgSrc: "assets/images/quiz-images/cinderella.webp",
         answers: ["Anastasia and Drizella", "Gizelle and Anabelle", "Florence and Marge",],
         correct: "Anastasia and Drizella",
     },
     {
         question: "Which College Is Elle Applying for In Legally Blonde?",
-        imgSrc: "images/quiz-images/legally-blonde.webp",
+        imgSrc: "assets/images/quiz-images/legally-blonde.webp",
         answers: ["Yale", "Harvard", "Princeton",],
         correct: "Harvard",
     },
     {
         question: "What’s the name of the sword in 'The Sword In The Stone?'",
-        imgSrc: "../images/quiz-images/swordinthestone.webp",
+        imgSrc: "/images/quiz-images/swordinthestone.webp",
         answers: ["Glamdring", "Callandor", "Excalibur",],
         correct:  "Excalibur",
     },
@@ -274,6 +274,8 @@ const answerC = document.getElementById("answerC");
 answerA.innerHTML=currentQuestion.answers[0];
 answerB.innerHTML=currentQuestion.answers[1];
 answerC.innerHTML=currentQuestion.answers[2];
+
+acceptingAnswers = true;
 
 availableQuestions.splice(questionIndex, 1); 
 };

@@ -217,6 +217,12 @@ footer p {
     margin: 0;
 }
 
+footer .policy {
+    text-decoration: none;
+    background-color: var(--contrast-color);
+    color: var(--primary-color);
+}
+
 /* CSS Page the-pub-quiz-challenge
 */
 
@@ -328,8 +334,21 @@ footer p {
 
 
 
+/* CSS 404 */
+.oops {
+    margin: 2.5rem;
+    font-size:5rem;
+    }
 
+#oops {
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin-bottom: revert-layer;
+}
 
+#button-return {
+    margin: 4rem 0 10rem;
+}
 
 /* responsive CSS */
 
@@ -389,6 +408,6 @@ footer p {
         width: 25%;
     }
     .button-answer {
-        width:40%;
+        width:30%;
         }
 }
