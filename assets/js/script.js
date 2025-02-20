@@ -110,9 +110,9 @@ let questionsEasy = [
         correct: "Dr. Pepper",
     },
     {
-        question: "Who was married to John F. Kenedy and first lady from 1961 until 1963?",
+        question: "Who was married to John F. Kennedy and first lady from 1961 until 1963?",
         imgSrc: "../assets/images/quiz-images/jfkandwife.webp",
-        answers: ["Michelle LaVaughn Robinson Kenedy", "Eleanor Kenedy", "Jacqueline Kennedy Onassis",],
+        answers: ["Michelle LaVaughn Robinson Kennedy", "Eleanor Kennedy", "Jacqueline Kennedy Onassis",],
         correct: "Jacqueline Kennedy Onassis",
     },
     {
