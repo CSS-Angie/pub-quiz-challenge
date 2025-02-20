@@ -3,25 +3,25 @@
 let questionsEasy = [ 
     {
         question: "Who was the first Disney character created by Walt Disney?",
-        imgSrc: "../assets/images/quiz-images/mickey-and-friends.webp",
+        imgSrc: "/assets/images/quiz-images/mickey-and-friends.webp",
         answers: ["Alladin ", "Donald Duck", "Mickey Mouse",],
         correct: "Mickey Mouse",
     },
     {
         question: "Which painting is also known as La Joconde?",
-        imgSrc: "../assets/images/quiz-images/joconde.webp",
+        imgSrc: "/images/quiz-images/joconde.webp",
         answers: ["Girl with the pearl earring", "Mona Lisa", "Woman with a mirror",],
         correct: "Mona Lisa",
     },
     {
         question: "Who sings Poker Face?",
-        imgSrc: "../assets/images/quiz-images/pokerface.webp",
+        imgSrc: "/assets/images/quiz-images/pokerface.webp",
         answers: ["Lady Gaga", "Madonna ", "Taylor Swift",],
         correct: "Lady Gaga",
     },
     {
         question: "What are the names of Cinderella’s evil stepsisters?",
-        imgSrc: "../assets/images/quiz-images/cinderella.webp",
+        imgSrc: "../images/quiz-images/cinderella.webp",
         answers: ["Anastasia and Drizella", "Gizelle and Anabelle", "Florence and Marge",],
         correct: "Anastasia and Drizella",
     },
