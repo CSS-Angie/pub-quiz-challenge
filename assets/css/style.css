@@ -354,18 +354,18 @@ footer p {
 @media only screen and (min-width: 768px) {
     .input-name {
         width: 50%;
-}
-.button-answer {
+    }
+    #hero .quizpage {
+    display: none;
+    }
+    .button-answer {
     width:75%;
-}
+    }
 }
 
 @media only screen and (min-width: 1024px) {
     #hero .title {
         font-size: 3..8rem;
-    }
-    #hero .quizpage {
-        display: none;
     }
     .intro-text {
         font-weight: inherit;
@@ -376,7 +376,6 @@ footer p {
     #confirm {
         width: 30%;
     }
-
 }
 
 @media only screen and (min-width: 1280px) {

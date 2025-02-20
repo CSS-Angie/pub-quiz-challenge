@@ -327,10 +327,15 @@ answerButtons.forEach(answerButton => {
         const selectedOption = e.target;
         const selectedAnswer = selectedOption.innerHTML;
 
-        let classToApply = selectedAnswer === currentQuestion.answer ? 'correct' : 'incorrect';
+        if (selectedAnswer == correctAnswer) {
+            incrementScore(); 
+        } else {
+            !incrementScore();
+        }
 
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+       
         selectedOption.parentElement.classList.add(classToApply);
-
         setTimeout(() => {
             selectedOption.parentElement.classList.remove(classToApply);
 
@@ -341,18 +346,6 @@ answerButtons.forEach(answerButton => {
         } 500;
 })})});
 }
-
-function classToApply() {
-    if (selectedAnswer == correctAnswer) {
-        incrementScore(); 
-        answerButtons.classList.add("correct");
-    } else {
-        score (0);
-        answerButtons.classList.add("incorrect");
-    }
-};
-
-
 
 // counts up when answer is correct 
 function incrementScore () {
@@ -365,9 +358,6 @@ function incrementScore () {
 function showScore() {
 console.log(finalScore);
 }
-
-
-
 
 // Choose level of game before starting the challenge
 
@@ -397,6 +387,4 @@ document.addEventListener("DOMContentLoaded", function() {
             throw "Unknown level.";
             }}
 */
-
-
             runGame();
