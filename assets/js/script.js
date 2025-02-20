@@ -110,7 +110,7 @@ let questionsEasy = [
         correct: "Dr. Pepper",
     },
     {
-        question: "Who was married to John F. Kenedy and was first lady from 1961 until 1963?",
+        question: "Who was married to John F. Kenedy and first lady from 1961 until 1963?",
         imgSrc: "../assets/images/quiz-images/jfkandwife.webp",
         answers: ["Michelle LaVaughn Robinson Kenedy", "Eleanor Kenedy", "Jacqueline Kennedy Onassis",],
         correct: "Jacqueline Kennedy Onassis",
@@ -288,7 +288,7 @@ function displayImage (imgSrc) {
 /** click event for answer
 answerButtons.forEach.onclick = function () {
     checkAnswer();
-    console.log("you clicked");
+   
 }
 
 function selectAnswer(){
@@ -318,7 +318,7 @@ function checkAnswer() {
     }
 };
 */
-
+function selectAnswer(){
 answerButtons.forEach(answerButton => {
     answerButton.addEventListener("click", e => {
         if (!acceptingAnswers) return;
@@ -333,9 +333,14 @@ answerButtons.forEach(answerButton => {
 
         setTimeout(() => {
             selectedOption.parentElement.classList.remove(classToApply);
-            newQuestion();
-        }, 500);
-})});
+
+            if (questionCount < maxQuestions) {
+                newQuestion();
+            } else {
+                showScore();
+        } 500;
+})})});
+}
 
 function classToApply() {
     if (selectedAnswer == correctAnswer) {
@@ -346,18 +351,7 @@ function classToApply() {
         answerButtons.classList.add("incorrect");
     }
 };
-    
-/**function setTimeout(){
-    var answerArea = getElementById("answer-area");
-    
-    answerArea.classList.remove("correct","incorrect");
 
-    if (questionCount < maxQuestions) {
-        newQuestion();
-    } else {
-        showScore();
-    } 500;
-};*/
 
 
 // counts up when answer is correct 
@@ -377,43 +371,32 @@ console.log(finalScore);
 
 // Choose level of game before starting the challenge
 
-/** 
+/**
 document.addEventListener("DOMContentLoaded", function() {
     let buttonsLevels = document.getElementsByTagName("btn-level");
 
-    for (let button of buttonsLevels) {
-        button.addEventListener("click", function() {
+    for (let buttonLevel of buttonsLevels) {
+        buttonLevel.addEventListener("click", function() {
             let gameType = this.getAttribute("data-type");
                 runGame(gameType);
             });
         }
     })
 
-        function runGame (gameType) {
+        function runGame () {
             document.getElementById("btn-level").value = "";
             
-            if (gameType === "novice") {
-                displayEasyQuestions();
-            } else if (gameType === "experienced") {
-                displayAverageQuestions();
-            } else if (gameType === "expert") {
-                displayHardquestions();
+            if (gameType == "novice") {
+                runGame(questionsEasy);
+            } else if (gameType == "experienced") {
+                runGame(questionsAverage);
+            } else if (gameType == "expert") {
+                runGame(questionsHard);
             } else {
             alert ("Please choose your level to start the game");
             throw "Unknown level.";
-            }
-            }
-        
-            /**
-            displayEasyQuestions() {
-            return questionIndex.textContent = questionsEasy.question;
-            }
-            displayAverageQuestions() {
-            return ..textContent = questionsAverage.question;
-            }
-            displayHardquestions() {
-                return ..textContent = questionsHard.question;
-            })
-                */
+            }}
+*/
+
 
             runGame();

@@ -112,7 +112,7 @@ a {
 }
 
 .input-name {
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     padding: 1%;
@@ -133,7 +133,6 @@ a {
     font-weight: 200;
     text-transform: lowercase;
     justify-content: center;
-    margin-left: 1rem;
     letter-spacing: 2px;
     font-size: 0.9rem;
 }
@@ -245,12 +244,12 @@ footer p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     padding: 0.5rem;
 }
 
 .header-questionpage {
-    font-size: medium;
+    font-size: inherit;
     font-weight: lighter;
 }
 
@@ -335,35 +334,56 @@ footer p {
 /* responsive CSS */
 
 @media only screen and (min-width: 600px) {
+    h2 {
+        margin:15px;
+    }
     #hero .title {
         font-size: 3rem;
     }
+    #confirm {
+        padding: 0.5rem;
+        width: 40%;
+        font-weight: 200;
+    }
+    #image-area {
+        max-height: 300px;
+    }
+    
 }
 
 @media only screen and (min-width: 768px) {
     .input-name {
         width: 50%;
 }
+.button-answer {
+    width:75%;
+}
 }
 
 @media only screen and (min-width: 1024px) {
     #hero .title {
-        font-size: 5rem;
+        font-size: 3..8rem;
+    }
+    #hero .quizpage {
+        display: none;
+    }
+    .intro-text {
+        font-weight: inherit;
     }
     .input-name {
         width: 45%;
     }
-#image-area img {
-    max-width:50%;
+    #confirm {
+        width: 30%;
     }
+
 }
 
 @media only screen and (min-width: 1280px) {
     .input-name {
-        width: 40%;
+        width: 30%;
     }
-}
-
-@media only screen and (min-width: 1440px) {
-    
+    #confirm {
+        width: 25%;
+    }
 }
