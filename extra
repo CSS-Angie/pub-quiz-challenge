@@ -12,6 +12,42 @@ function selectAnswer (e) {
         nextButton.style.display = "block";
     }
 
+    
+/** click event for answer
+answerButtons.forEach.onclick = function () {
+    checkAnswer();
+   
+}
+
+function selectAnswer(){
+    const clickAnswer = new Event("clicktarget");
+
+    answerButtons.forEach(function() {
+        answerButtons.addEventListener("clicktarget", e => {
+        if (!acceptingAnswers) return;
+        acceptingAnswers = false; 
+        checkAnswer(selectedAnswer);
+})});
+};
+
+// checking the correctness of answer after clicking it 
+function checkAnswer() {
+    let correctAnswer = questionsEasy[questionIndex].correct;
+    questionCount = +1;
+
+    if (selectedAnswer == correctAnswer) {
+        incrementScore(); 
+        answerButtons.classList.add("correct");
+        setTimeout(1000);
+    } else {
+        score (0);
+        answerButtons.classList.add("incorrect");
+        setTimeout(2000);
+    }
+};
+*/
+
+    // Choose level of game before starting the challenge
 function chooseLevel() {
     let buttonsLevel = document.getElementByTagName("btn-level");
     
@@ -24,6 +60,33 @@ function chooseLevel() {
    
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    let buttonsLevels = document.getElementsByTagName("btn-level");
+
+    for (let buttonLevel of buttonsLevels) {
+        buttonLevel.addEventListener("click", function() {
+            let gameType = this.getAttribute("data-type");
+                runGame(gameType);
+            });
+        }
+    })
+
+        function runGame () {
+            document.getElementById("btn-level").value = "";
+            
+            if (gameType == "novice") {
+                runGame(questionsEasy);
+            } else if (gameType == "experienced") {
+                runGame(questionsAverage);
+            } else if (gameType == "expert") {
+                runGame(questionsHard);
+            } else {
+            alert ("Please choose your level to start the game");
+            throw "Unknown level.";
+            }}
+
+
+// nextButton function
 function nextButtonClick (){
     questionIndex++;
     /**total amount of questions=10**/

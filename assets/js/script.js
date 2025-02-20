@@ -3,37 +3,37 @@
 let questionsEasy = [ 
     {
         question: "Who was the first Disney character created by Walt Disney?",
-        imgSrc: "/assets/images/quiz-images/mickey-and-friends.webp",
+        imgSrc: "../images/quiz-images/mickey-and-friends.webp",
         answers: ["Alladin ", "Donald Duck", "Mickey Mouse",],
         correct: "Mickey Mouse",
     },
     {
         question: "Which painting is also known as La Joconde?",
-        imgSrc: "/images/quiz-images/joconde.webp",
+        imgSrc: "images/quiz-images/joconde.webp",
         answers: ["Girl with the pearl earring", "Mona Lisa", "Woman with a mirror",],
         correct: "Mona Lisa",
     },
     {
         question: "Who sings Poker Face?",
-        imgSrc: "/assets/images/quiz-images/pokerface.webp",
+        imgSrc: "../images/quiz-images/pokerface.webp",
         answers: ["Lady Gaga", "Madonna ", "Taylor Swift",],
         correct: "Lady Gaga",
     },
     {
         question: "What are the names of Cinderella’s evil stepsisters?",
-        imgSrc: "../images/quiz-images/cinderella.webp",
+        imgSrc: "images/quiz-images/cinderella.webp",
         answers: ["Anastasia and Drizella", "Gizelle and Anabelle", "Florence and Marge",],
         correct: "Anastasia and Drizella",
     },
     {
         question: "Which College Is Elle Applying for In Legally Blonde?",
-        imgSrc: "../assets/images/quiz-images/legally-blonde.webp",
+        imgSrc: "images/quiz-images/legally-blonde.webp",
         answers: ["Yale", "Harvard", "Princeton",],
         correct: "Harvard",
     },
     {
         question: "What’s the name of the sword in 'The Sword In The Stone?'",
-        imgSrc: "../assets/images/quiz-images/swordinthestone.webp",
+        imgSrc: "../images/quiz-images/swordinthestone.webp",
         answers: ["Glamdring", "Callandor", "Excalibur",],
         correct:  "Excalibur",
     },
@@ -254,7 +254,6 @@ function runGame() {
 };
 
 // New question is generated and displayed from the array
-
 function newQuestion() {
 
 // display question 
@@ -276,8 +275,6 @@ answerA.innerHTML=currentQuestion.answers[0];
 answerB.innerHTML=currentQuestion.answers[1];
 answerC.innerHTML=currentQuestion.answers[2];
 
-acceptingAnswers = true;
-
 availableQuestions.splice(questionIndex, 1); 
 };
 
@@ -285,39 +282,6 @@ function displayImage (imgSrc) {
     document.getElementById("image-area").querySelector("img").src = imgSrc;
 }
 
-/** click event for answer
-answerButtons.forEach.onclick = function () {
-    checkAnswer();
-   
-}
-
-function selectAnswer(){
-    const clickAnswer = new Event("clicktarget");
-
-    answerButtons.forEach(function() {
-        answerButtons.addEventListener("clicktarget", e => {
-        if (!acceptingAnswers) return;
-        acceptingAnswers = false; 
-        checkAnswer(selectedAnswer);
-})});
-};
-
-// checking the correctness of answer after clicking it 
-function checkAnswer() {
-    let correctAnswer = questionsEasy[questionIndex].correct;
-    questionCount = +1;
-
-    if (selectedAnswer == correctAnswer) {
-        incrementScore(); 
-        answerButtons.classList.add("correct");
-        setTimeout(1000);
-    } else {
-        score (0);
-        answerButtons.classList.add("incorrect");
-        setTimeout(2000);
-    }
-};
-*/
 function selectAnswer(){
 answerButtons.forEach(answerButton => {
     answerButton.addEventListener("click", e => {
@@ -338,7 +302,7 @@ answerButtons.forEach(answerButton => {
         selectedOption.parentElement.classList.add(classToApply);
         setTimeout(() => {
             selectedOption.parentElement.classList.remove(classToApply);
-
+            questionCount = questionIndex++;
             if (questionCount < maxQuestions) {
                 newQuestion();
             } else {
@@ -359,32 +323,5 @@ function showScore() {
 console.log(finalScore);
 }
 
-// Choose level of game before starting the challenge
 
-/**
-document.addEventListener("DOMContentLoaded", function() {
-    let buttonsLevels = document.getElementsByTagName("btn-level");
-
-    for (let buttonLevel of buttonsLevels) {
-        buttonLevel.addEventListener("click", function() {
-            let gameType = this.getAttribute("data-type");
-                runGame(gameType);
-            });
-        }
-    })
-
-        function runGame () {
-            document.getElementById("btn-level").value = "";
-            
-            if (gameType == "novice") {
-                runGame(questionsEasy);
-            } else if (gameType == "experienced") {
-                runGame(questionsAverage);
-            } else if (gameType == "expert") {
-                runGame(questionsHard);
-            } else {
-            alert ("Please choose your level to start the game");
-            throw "Unknown level.";
-            }}
-*/
             runGame();
