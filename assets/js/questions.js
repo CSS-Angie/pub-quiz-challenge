@@ -1,5 +1,5 @@
 let questionsEasy = [ 
-    
+    {
     question: "Who was the first Disney character created by Walt Disney?",
     imgSrc: "assets/images/quiz-images/mickey-and-friends.webp",
     answers: ["Alladin ", "Donald Duck", "Mickey Mouse",],

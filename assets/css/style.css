@@ -245,7 +245,7 @@ footer .policy {
 } 
 */
 
-#question-area {
+#questions-area {
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -291,7 +291,8 @@ footer .policy {
 .button-answer:hover {
     cursor: pointer;
     background-color: var(--secondary-color);
-    transition: 30ms;
+    transition: transform 80ms;
+    transform: scale(1.04);
 }
 
 .button-answer:active {
@@ -300,9 +301,10 @@ footer .policy {
     margin: 0.5rem;
 }
 
-.button-answer:disabled {
+.button-answer[disabled]:hover {
     cursor: not-allowed;
     box-shadow: none;
+    transform: none;
 }
 
 .correct {

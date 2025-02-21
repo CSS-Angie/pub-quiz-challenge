@@ -15,9 +15,8 @@ displayName.style.color = "#151c4a";
 });
 
 //Name in local storage for last page
-localStorage.setItem("input", "inputValue");
-local
+/**localStorage.setItem("input", "inputValue");
 document.getElementById("local-name").innerHTML = localStorage.getItem("input");
 
-<p ><span id="local-name">Name,<br>here's your final score!</span></p>
-
+`<p ><span id="local-name">Name,<br>here's your final score!</span></p>`
+*/
