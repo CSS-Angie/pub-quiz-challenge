@@ -296,7 +296,7 @@ footer .policy {
 }
 
 .button-answer:active {
-    transition: ease-in 15s;
+    transition: ease-in 3s;
     padding: 1rem;
     margin: 0.5rem;
 }
@@ -304,7 +304,9 @@ footer .policy {
 .button-answer[disabled]:hover {
     cursor: not-allowed;
     box-shadow: none;
+    transition:none;
     transform: none;
+    background-color: var(--primary-color);
 }
 
 .correct {
