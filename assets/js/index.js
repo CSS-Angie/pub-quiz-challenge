@@ -15,8 +15,8 @@ displayName.style.color = "#151c4a";
 });
 
 //Name in local storage for last page
-/**localStorage.setItem(inputName, value);
+localStorage.setItem(input, value);
 local
-document.getElementById("display-name").innerHTML = localStorage.getItem("input-name");
-*/
+document.getElementById("display-name").innerHTML = localStorage.getItem("input");
+
 

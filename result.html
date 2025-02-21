@@ -27,43 +27,43 @@
     <!--No Navigation-->
     <!--Hero section-->
     <header>
-        <a href="index.html" aria-label="clicking here will take you back to the start"><div id="hero">
-            
-              <div><img src="assets/images/logo-pub-quiz.png" alt="Logo of The Ultimate Pub Quiz"></div>
-              <div class="title">The Ultimate Pub Quiz</div>
-            
-          </div></a>
+        <div id="hero">
+        <div><img src="assets/images/logo-pub-quiz.png" alt="Logo of The Ultimate Pub Quiz"></div>
+        <div class="title">The Ultimate Pub Quiz</div>
+        </div>
+    </header>
     <main>
     <!--Text area-->
-        <h1 class="intro">Great, Name!</h1>
-            <p class="intro-text">Your score is: <span id=""></span>score</p>
-        <!-- Show score area-->
-        <div id="show-name">
-            <p ><span id="display-name">, here's your final score!</span>!</p>
-        </div>
-        <div id="score-display">
-            <p>Total score:<span id="final-score"></span></p>
-        </div> 
-           
-        <!--Button area for restarting the quiz-->
-        <div id="level-area">
-            <p>Choose your level:</p>
+    <h1 class="intro"> </h1>
+    
+    <!-- Show score area-->
+    <div id="show-name">
+        <p ><span id="display-name">Name,<br>here's your final score!</span></p>
+    </div>
+    <div id="score-display">
+        <p>Total score:<br><br><span id="final-score">0</span></p>
+    </div> 
+        
+        <!--Button area-->
+<!--        <div id="level-area">
+            <div class="choose"><p>Choose your level:</p></div>
             <label for="btn-novice" class="form-label" hidden>Novice</label>
-            <button type="button" id="btn-novice" onclick="novice-questions" class="btn btn-level"  aria-label="button to choose the easy questions">Novice</button>
+            <button type="button" data-type="novice" id="btn-novice" class="btn btn-level"  aria-label="button to choose the easy questions">Novice</button>
             <label for="btn-experienced" class="form-label" hidden>Experienced</label>
-            <button type="button" id="btn-experienced" onclick="novice-questions" class="btn btn-level"  aria-label="button to choose the normal questions">Experienced</button>
+            <button type="button" data-type="experienced" id="btn-experienced" class="btn btn-level"  aria-label="button to choose the normal questions">Experienced</button>
             <label for="btn-expert" class="form-label" hidden>Expert</label>
-            <button type="button" id="btn-expert" onclick="novice-questions" class="btn btn-level"  aria-label="button to choose the difficult questions">Expert</button>
-        </div>
+            <button type="button" data-type="expert" id="btn-expert" class="btn btn-level"  aria-label="button to choose the difficult questions">Expert</button>
+        </div>-->
         <div>
             <label for="btn-start" class="form-label" hidden>Start</label>
             <button type="submit" class="btn btn-start" id="btn-start" name="confirmed"
-                aria-label="button to restart the challenge" onclick=document.location="the-pub-quiz-challenge.html">Play again!</button>
+                aria-label="button to start the challenge" onclick=document.location="the-pub-quiz-challenge.html">Play again!</button>
         </div>
     </main>
     <footer>
         <p><a class="policy" href="privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a> |  Copyright © 2025</p>
     </footer>
+        <script src="assets/js/index.js"></script>
         <script src="assets/js/script.js"></script>
 </body>
 

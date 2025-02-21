@@ -322,6 +322,7 @@ function incrementScore () {
 
 // show score at the the end 
 function showScore() {
+    
 console.log(finalScore);
 }
 
