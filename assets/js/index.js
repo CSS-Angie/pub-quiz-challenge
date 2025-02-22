@@ -28,18 +28,6 @@ console.log("alert")
     }
 }
 }
-
-/**function startChallenge() {
-    document.getElementById("btn-start").addEventListener("click", startChallenge);
-    let displayName = document.getElementById("btn-start");
-if (displayName.innerHTML.value !=="") { 
-    alert(`Please confirm your name`);
-    console.log("alert")
-} else {
-    console.log("html")
-    redirect();
-};
-}
-*/
-
 startChallenge();
+
+
