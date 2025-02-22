@@ -1,7 +1,4 @@
-
 // Displays Name of Player on first page after having submitted a name
-
-
 const confirmName = document.getElementById("confirm");
 const inputName = document.querySelector("input");
 const displayName = document.getElementById("display-name");
@@ -14,6 +11,24 @@ displayName.style.backgroundColor = "#f88839";
 displayName.style.color = "#151c4a";
 });
 
+// Open game after confirming name
+function startChallenge() {
+    let startButton = document.getElementById("btn-start")
+if (displayName.innerHTML.value !=="") {
+    alert(`Please confirm your name`);
+    console.log("alert")
+} else {
+    redirect();
+    function redirect() {
+        window.location.href="https://css-angie.github.io/pub-quiz-challenge/the-pub-quiz-challenge.html";
+        };
+   console.log("html")
+};
+}
+
+
+
+startChallenge();
 //Name in local storage for last page
 /**localStorage.setItem("input", "inputValue");
 document.getElementById("local-name").innerHTML = localStorage.getItem("input");

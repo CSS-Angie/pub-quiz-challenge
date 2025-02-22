@@ -324,8 +324,8 @@ function selectAnswer() {
         console.log("time out");
         questionCount = questionCount++;
         console.log("question count");
-        if ((availableQuestions.length = 0 || questionCount > MAX_QUESTIONS)) {
-          showModal();
+        if (availableQuestions.length = 0 || questionCount > MAX_QUESTIONS) {
+          showScore();
           console.log("show score");
         } else {
           newQuestion();
@@ -340,47 +340,44 @@ function selectAnswer() {
 // counts up when answer is correct
 function incrementScore() {
   console.log("calling increment score");
-  //let finalScore = parseInt(document.getElementById("final-score").innerText);
+ 
   score = score + SCORE_CORRECT;
   console.log(score);
   //document.getElementById("final-score").textContent = score + 100;
 }
 
-// show score at the the end
-function showScore() {
-  show modal;
-  console.log(mostRecentScore);
-}
-
-function mostRecentScore() {}
-
-
 // basics modal are taken from w3school.com
-//function showModal() {
+function showScore() {
 var modal = document.getElementById("myModal");
-
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
+//var btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
+// return modal;
 // When the user clicks the button, open the modal
-btn.onclick = function () {
+//btn.onclick = function () {
+var finalScore = document.getElementById("final-score");
+  if (availableQuestions.length = 0 || questionCount > MAX_QUESTIONS) {
+    console.log("show score");
+    ("modal").modal("show");
+    finalScore.innertext = mostRecentScore;
   modal.style.display = "block";
 };
-
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
   modal.style.display = "none";
 };
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 };
-//}
+}
+
+// show score at the the end
+function mostRecentScore() {}
+
+
 
 runGame();
