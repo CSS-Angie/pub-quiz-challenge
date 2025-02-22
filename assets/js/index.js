@@ -13,16 +13,18 @@ displayName.style.color = "#151c4a";
 
 // Open game after confirming name
 function startChallenge() {
-    let startButton = document.getElementById("btn-start")
+    let startButton = document.getElementById("btn-start");
+    function redirect() {
+        window.location.href="https://css-angie.github.io/pub-quiz-challenge/the-pub-quiz-challenge.html";
+        };
 if (displayName.innerHTML.value !=="") {
     alert(`Please confirm your name`);
     console.log("alert")
 } else {
+     console.log("html")
     redirect();
-    function redirect() {
-        window.location.href="https://css-angie.github.io/pub-quiz-challenge/the-pub-quiz-challenge.html";
-        };
-   console.log("html")
+    
+  
 };
 }
 
