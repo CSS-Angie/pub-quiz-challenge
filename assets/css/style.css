@@ -1,519 +1,499 @@
 /*Google Fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 /*CSS Variables*/
 :root {
-    --primary-font: "Open Sans", sans-serif;
-    --secondary-font: "Bungee", cursive;
-    --primary-color: #151c4a;
-    --secondary-color: #0069b0;
-    --contrast-color: #f88839;
-    --secondary-contrast-color: #ffb000;
-    --text-color: #ffd880;
+  --primary-font: "Open Sans", sans-serif;
+  --secondary-font: "Bungee", cursive;
+  --primary-color: #151c4a;
+  --secondary-color: #0069b0;
+  --contrast-color: #f88839;
+  --secondary-contrast-color: #ffb000;
+  --text-color: #ffd880;
 }
 
 /*CSS Basics */
-
 * {
-    background-color: var(--primary-color);
-    font-family: var(--primary-font);
-    color: var(--text-color);
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  background-color: var(--primary-color);
+  font-family: var(--primary-font);
+  color: var(--text-color);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    min-height:100vh;
-    background-color: var(--primary-color);
-    font-family: var(--primary-font);
-    color: var(--text-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--primary-color);
+  font-family: var(--primary-font);
+  color: var(--text-color);
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--contrast-color);
-    width:100%;
-    margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--contrast-color);
+  width: 100%;
+  margin-bottom: 40px;
 }
 
 h2 {
-    font-size: 2rem;
-    font-weight: 300;
-    margin-bottom: 40px;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 40px;
 }
 
 p {
-    font-weight:300;
+  font-weight: 300;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /*CSS homepage*/
-
 #hero {
-    /*background: url(/assets/images/logo-pub-quiz.png) left no-repeat, url(/assets/images/logo-pub-quiz-challenge.png) right no-repeat;
-    */
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    background-color: var(--contrast-color);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: var(--contrast-color);
 }
 
 #hero img {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: var(--contrast-color);
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--contrast-color);
+  align-items: flex-start;
 }
 
 #hero .title {
-    display: flex;
-    flex-direction: column;
-    font-family: var(--secondary-font);
-    color: var(--primary-color);
-    text-shadow: 2px 2px var(--secondary-color);
-    background-color: var(--contrast-color);
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    font-size: 2.3rem;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--secondary-font);
+  color: var(--primary-color);
+  text-shadow: 2px 2px var(--secondary-color);
+  background-color: var(--contrast-color);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 2.3rem;
 }
 
 .intro {
-    font-weight: 300;
-    margin-bottom: 30px;
+  font-weight: 300;
+  margin-bottom: 30px;
 }
 .intro-text {
-    padding: 0 2rem;
+  padding: 0 2rem;
 }
 
 .enter-name {
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem;
-    margin-bottom: 50px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  margin-bottom: 50px;
+  align-items: center;
 }
 
 .label-name {
-    display: flex;
-    flex-direction: row;
-    height: auto;
-    font-size: 150%;
-    padding: inherit;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  font-size: 150%;
+  padding: inherit;
 }
 
 .input-name {
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    padding: 1%;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    font-family: var(--primary-font);
-    text-align: center;
-    border-radius: 5%;
-    font-size:larger;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  padding: 1%;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  font-family: var(--primary-font);
+  text-align: center;
+  border-radius: 5%;
+  font-size: larger;
 }
 
 #confirm {
-    display: flex;
-    flex-direction: row;
-    padding: 0.5rem;
-    margin-top: 1rem;
-    width: 80%;
-    font-weight: 200;
-    text-transform: lowercase;
-    justify-content: center;
-    letter-spacing: 2px;
-    font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  width: 80%;
+  font-weight: 200;
+  text-transform: lowercase;
+  justify-content: center;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
 }
 
 #display-name {
-    margin: 5rem 0 0;
-    padding: 0.5rem 2rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 1.5rem;
+  margin: 5rem 0 0;
+  padding: 0.5rem 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
 }
 
 #level-area {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-    width: 90%;
-    justify-content: center;
-    align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 90%;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-
 .choose {
-    display: flex ;
-    flex-direction: row;
-    width: 90%;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: center;
 }
 
 #level-area .btn-level {
-    display: flex;
-    flex-direction: row;
-    padding: 1rem;
-    margin-top: 1rem;
-    width: 90%;
-    font-weight: 400;
-    text-transform: lowercase;
-    justify-content: center;
-    margin-left: 1rem;
-    letter-spacing: 2px;
-    font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 90%;
+  font-weight: 400;
+  text-transform: lowercase;
+  justify-content: center;
+  margin-left: 1rem;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
 }
 
 #level-area .btn-level:hover,
 #confirm-name .btn-level:hover {
-    cursor: pointer;
-    background-color: var(--secondary-color);
-    transition: 0.3s;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  transition: 0.3s;
 }
 
 .btn-start {
-    padding: 10px 25px;
-    text-align: center;
-    background-color: var(--contrast-color);
-    color:  var(--primary-color);
-    font-size:  16px;
-    font-family: var(--primary-font);
-    font-weight: bold;
-    border: 8px solid var(--secondary-contrast-color);
-    margin-bottom: 45px;
-    box-shadow: 2px 4px var(--contrast-color);
-    border-radius: 5%;
-    text-transform: uppercase;
+  padding: 10px 25px;
+  text-align: center;
+  background-color: var(--contrast-color);
+  color: var(--primary-color);
+  font-size: 16px;
+  font-family: var(--primary-font);
+  font-weight: bold;
+  border: 8px solid var(--secondary-contrast-color);
+  margin-bottom: 45px;
+  box-shadow: 2px 4px var(--contrast-color);
+  border-radius: 5%;
+  text-transform: uppercase;
 }
 
 .btn-start:hover {
-    color: var(--text-color);
-    background-color: var(--primary-color);
+  color: var(--text-color);
+  background-color: var(--primary-color);
 }
 
 footer {
-    margin-top: auto;
-    background-color: var(--contrast-color);
-    color: var(--primary-color);
+  margin-top: auto;
+  background-color: var(--contrast-color);
+  color: var(--primary-color);
 }
 
 footer p {
-    background-color: var(--contrast-color);
-    color: var(--primary-color);
-    font-size: small;
-    margin: 0;
+  background-color: var(--contrast-color);
+  color: var(--primary-color);
+  font-size: small;
+  margin: 0;
 }
 
 footer .policy {
-    text-decoration: none;
-    background-color: var(--contrast-color);
-    color: var(--primary-color);
+  text-decoration: none;
+  background-color: var(--contrast-color);
+  color: var(--primary-color);
 }
-
-/* CSS Page the-pub-quiz-challenge
-*/
-
-/*#total-questions {
-    width: 100%;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-evenly;
-    gap: 0.5rem;
-
-#total-questions span {
-    width: 100%;
-    height: 4px;
-    border-radius:25%;
-    background-color: var(--secondary-color);
-}
-
-#total-questions .seen {
-    background-color: var(--secondary-contrast-color);
-} 
-*/
 
 #questions-area {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.7rem;
-    padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+  padding: 0.5rem;
 }
 
 .header-questionpage {
-    font-size: inherit;
-    font-weight: lighter;
+  font-size: inherit;
+  font-weight: lighter;
 }
 
-#image-area  {
-    display: block; 
-    margin-bottom:1rem;
+#image-area {
+  display: block;
+  margin-bottom: 1rem;
 }
 
 #image-area img {
-    border: var(--contrast-color) 5px solid;
-    max-width:80%;
-    background-color: var(--contrast-color);
+  border: var(--contrast-color) 5px solid;
+  max-width: 80%;
+  background-color: var(--contrast-color);
 }
 
 #answer-area {
-    display: flex;
-    flex-direction: column;
-    margin: 1rem;
-    width: 80%;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
 }
 
 .button-answer {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    margin: 0.5rem 0 0;
-    text-decoration: none;
-    width:90%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 0.5rem 0 0;
+  text-decoration: none;
+  width: 90%;
 }
 
 .button-answer:hover {
-    cursor: pointer;
-    background-color: var(--secondary-color);
-    transition: transform 80ms;
-    transform: scale(1.04);
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  transition: transform 80ms;
+  transform: scale(1.04);
 }
 
 .button-answer:active {
-    transition: ease-in 3s;
-    padding: 1rem;
-    margin: 0.5rem;
+  transition: ease-in 3s;
+  padding: 1rem;
+  margin: 0.5rem;
 }
 
 .button-answer[disabled]:hover {
-    cursor: not-allowed;
-    box-shadow: none;
-    transition:none;
-    transform: none;
-    background-color: var(--primary-color);
+  cursor: not-allowed;
+  box-shadow: none;
+  transition: none;
+  transform: none;
+  background-color: var(--primary-color);
 }
 
 .correct {
-    background-color: green;
+  background-color: #3FD181;
 }
 
 .incorrect {
-    background-color: red;
+  background-color: #D13F3F;
 }
 
 .button-next {
-    display: block; /*block to center the button*/
-    padding: 0.5rem 2rem;
-    margin: 2rem 0;
-    
+  display: block; /*block to center the button*/
+  padding: 0.5rem 2rem;
+  margin: 2rem 0;
 }
 
 .button-next:hover {
-    padding: 0.5rem 2rem;
-    background-color: var(--secondary-color);
-    transition: 0.3s;
+  padding: 0.5rem 2rem;
+  background-color: var(--secondary-color);
+  transition: 0.3s;
 }
 
 /*CSS Result Modal */
 /* The Modal (background) */
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    position: relative;
-    background-color: var(--primary-color);
-    margin: auto;
-    padding: 0;
-    border: 1px solid #888;
-    width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
-  }
-  
-  /* Add Animation */
-  @-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
-    to {top:0; opacity:1}
-  }
-  
-  @keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-  }
-  
-  /* The Close Button */
-  .close {
-    color: white;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .modal-header {
-    padding: 0 10px;
-    background-color: var(--primary-color);
-    color: var(--contrast-color);
-  }
+  display: none;
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
 
-  .modal-header .title {
-    font-family: var(--secondary-font);
-    color: var(--primary-color);
-    text-shadow: 2px 2px var(--secondary-color);
-    background-color: var(--contrast-color);
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    font-size: 2.3rem;
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: var(--primary-color);
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
   }
-  
-  .modal-body {
-    background-color: var(--primary-color);
-    padding: 2px 10px;
-    display:block;
-    margin: 2rem 2rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: x-large;
-    border: 1px solid var(--contrast-color);
-    padding: 2rem;
-    text-align: center;
-    }
-  
-  .modal-footer {
-    padding: 2px 10px;
-    background-color: var(--primary-color);
-    
+  to {
+    top: 0;
+    opacity: 1;
   }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 0 10px;
+  background-color: var(--primary-color);
+  color: var(--contrast-color);
+}
+
+.modal-header .title {
+  font-family: var(--secondary-font);
+  color: var(--primary-color);
+  text-shadow: 2px 2px var(--secondary-color);
+  background-color: var(--contrast-color);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 2.3rem;
+}
+
+.modal-body {
+  background-color: var(--primary-color);
+  padding: 2px 10px;
+  display: block;
+  margin: 2rem 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: x-large;
+  border: 1px solid var(--contrast-color);
+  padding: 2rem;
+  text-align: center;
+}
+
+.modal-footer {
+  padding: 2px 10px;
+  background-color: var(--primary-color);
+}
 
 #score-display {
-    display:block;
-    margin: 2rem 2rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: x-large;
-    border: 1px solid var(--contrast-color);
-    padding: 2rem;
-    text-align: center;
+  display: block;
+  margin: 2rem 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: x-large;
+  border: 1px solid var(--contrast-color);
+  padding: 2rem;
+  text-align: center;
 }
 
 #score-display p {
-    font-weight: 400;
+  font-weight: 400;
 }
-
-
 
 /* CSS 404 */
 .oops {
-    margin: 2.5rem;
-    font-size:5rem;
-    }
+  margin: 2.5rem;
+  font-size: 5rem;
+}
 
 #oops {
-    font-weight: 500;
-    font-size: 2.5rem;
-    margin-bottom: revert-layer;
+  font-weight: 500;
+  font-size: 2.5rem;
+  margin-bottom: revert-layer;
 }
 
 #button-return {
-    margin: 4rem 0 10rem;
+  margin: 4rem 0 10rem;
 }
 
 /* responsive CSS */
 
 @media only screen and (min-width: 600px) {
-    h2 {
-        margin:15px;
-    }
-    #hero .title {
-        font-size: 3rem;
-    }
-    #confirm {
-        padding: 0.5rem;
-        width: 40%;
-        font-weight: 200;
-    }
-    #image-area {
-        max-height: 300px;
-    }
-    
+  h2 {
+    margin: 15px;
+  }
+  #hero .title {
+    font-size: 3rem;
+  }
+  #confirm {
+    padding: 0.5rem;
+    width: 40%;
+    font-weight: 200;
+  }
+  #image-area {
+    max-height: 300px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-    .input-name {
-        width: 50%;
-    }
-    #hero .quizpage {
+  .input-name {
+    width: 50%;
+  }
+  #hero .quizpage {
     display: none;
-    }
-    .button-answer {
-    width:75%;
-    }
+  }
+  .button-answer {
+    width: 75%;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-    #hero .title {
-        font-size: 3..8rem;
-    }
-    .intro-text {
-        font-weight: inherit;
-    }
-    .input-name {
-        width: 45%;
-    }
-    #confirm {
-        width: 30%;
-    }
-    .button-answer {
-        width:50%;
-        }
+  #hero .title {
+    font-size: 3.8rem;
+  }
+  .intro-text {
+    font-weight: inherit;
+  }
+  .input-name {
+    width: 45%;
+  }
+  #confirm {
+    width: 30%;
+  }
+  .button-answer {
+    width: 50%;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
-    .input-name {
-        width: 30%;
-    }
-    #confirm {
-        width: 25%;
-    }
-    .button-answer {
-        width:30%;
-        }
+  .input-name {
+    width: 30%;
+  }
+  #confirm {
+    width: 25%;
+  }
+  .button-answer {
+    width: 30%;
+  }
 }

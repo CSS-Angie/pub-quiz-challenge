@@ -247,12 +247,7 @@ let questionsEasy = [
   },
 ];
 
-// questions for Experienced
-
-// questions for Expert
-
 // Constants and variables
-
 const nextButton = document.getElementById("button-next");
 let answerButtons = document.querySelectorAll(".button-answer");
 let currentQuestion = {};
@@ -293,50 +288,48 @@ function newQuestion() {
   answerB.innerHTML = currentQuestion.answers[1];
   answerC.innerHTML = currentQuestion.answers[2];
 
-
-
   acceptingAnswers = true;
 
   availableQuestions.splice(questionIndex, 1);
   selectAnswer();
 }
 
+// helps display the image
 function displayImage(imgSrc) {
   document.getElementById("image-area").querySelector("img").src = imgSrc;
 }
 
+// accepts selecting answer and checks answer
 function selectAnswer() {
-  
-  console.log('correctAnswer')
+  console.log("correctAnswer");
   answerButtons.forEach((answerButton) => {
     answerButton.addEventListener("click", (e) => {
       if (!acceptingAnswers) return;
-      acceptingAnswers = false;      
-     
+      acceptingAnswers = false;
+
       const selectedOption = e.target;
       let selectedAnswer = selectedOption.textContent;
-      
+
       let classToApply =
         selectedAnswer == currentQuestion.correct ? "correct" : "incorrect";
-        
+
       selectedOption.classList.add(classToApply);
-      console.log("class applied")
-      if (classToApply = "correct") {
+      console.log("class applied");
+      if ((classToApply = "correct")) {
         incrementScore();
-        console.log("score")
+        console.log("score");
       }
       setTimeout(() => {
         selectedOption.parentElement.classList.remove(classToApply);
-        console.log("time out")
+        console.log("time out");
         questionCount = questionCount++;
-        console.log("question count")
-        if (availableQuestions.length = 0 || questionCount > MAX_QUESTIONS) {
-            showModal();
-            console.log("show score")
+        console.log("question count");
+        if ((availableQuestions.length = 0 || questionCount > MAX_QUESTIONS)) {
+          showModal();
+          console.log("show score");
         } else {
-            newQuestion();
-          console.log("giving a new question")
-          
+          newQuestion();
+          console.log("giving a new question");
         }
         5000;
       });
@@ -346,48 +339,48 @@ function selectAnswer() {
 
 // counts up when answer is correct
 function incrementScore() {
-    console.log('calling increment score');
+  console.log("calling increment score");
   //let finalScore = parseInt(document.getElementById("final-score").innerText);
-    score = score + SCORE_CORRECT;
-    console.log(score)
+  score = score + SCORE_CORRECT;
+  console.log(score);
   //document.getElementById("final-score").textContent = score + 100;
 }
 
 // show score at the the end
 function showScore() {
-   modal
-    console.log(mostRecentScore);
+  show modal;
+  console.log(mostRecentScore);
 }
 
-function mostRecentScore() {
-}
+function mostRecentScore() {}
 
 
+// basics modal are taken from w3school.com
 //function showModal() {
-    var modal = document.getElementById("myModal");
+var modal = document.getElementById("myModal");
 
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-    
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
-    
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function () {
+  modal.style.display = "block";
+};
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
 //}
 
 runGame();
