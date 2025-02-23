@@ -428,6 +428,9 @@ footer .policy {
   .button-answer {
     width: 75%;
   }
+  .modal-header {
+    width:95%;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -446,6 +449,9 @@ footer .policy {
   .button-answer {
     width: 50%;
   }
+  .modal-content {
+    width: 70%;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -457,5 +463,8 @@ footer .policy {
   }
   .button-answer {
     width: 30%;
+  }
+  .modal-content {
+    width: 60%;
   }
 }
