@@ -14,7 +14,6 @@ confirmName.addEventListener("click", () => {
 // Open game after confirming name
 function startChallenge() {
     document.getElementById("btn-start").onclick = function () {
-        let displayName = document.getElementById("display-name");
         if (displayName.innerHTML === "") {
             alert(`Please confirm your name`);
         } else {
@@ -28,5 +27,5 @@ startChallenge();
 
 document.getElementById("btn-return").onclick = function () {
     window.location.href =
-        "index.html";
-}
+        "https://css-angie.github.io/pub-quiz-challenge/";
+};

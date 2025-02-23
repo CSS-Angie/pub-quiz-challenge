@@ -264,7 +264,7 @@ footer .policy {
 .button-answer:hover {
   cursor: pointer;
   background-color: var(--secondary-color);
-  transition: transform 80ms;
+  transition: transform 30ms;
   transform: scale(1.04);
 }
 
@@ -274,21 +274,27 @@ footer .policy {
   margin: 0.5rem;
 }
 
-.button-answer[disabled]:hover {
+.button-answer:checked {
+  cursor: none;
+  background-color: inherit;
+  transition:none;
+  transform:initial;
+}
+.button-answer:disabled:hover {
   cursor: not-allowed;
   box-shadow: none;
   transition: none;
-  transform: none;
-  background-color: var(--primary-color);
+  transform: initial;
+  background-color: inherit;
 }
 
 .correct {
-  background-color: #3FD181;
+  background-color: #176439;  
 }
 
 .incorrect {
-  background-color: #D13F3F;
-}
+  background-color: #A22C2C;
+  }
 
 .button-next {
   display: block; /*block to center the button*/

@@ -270,11 +270,15 @@ function runGame() {
 // New question is generated and displayed from the array
 function newQuestion() {
   // display question
-  const questionIndex = Math.floor(Math.random() * questionsEasy.length);
+  if (availableQuestions.length === 0 || questionCount >= MAX_QUESTIONS) {
+    showScore();
+    return;
+  }
+  const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
 
-  var questions = document.getElementById("questions");
-  questions.innerHTML = currentQuestion.question;
+  const questionElement = document.getElementById("questions");
+  questionElement.innerHTML = currentQuestion.question;
 
   // display image
   displayImage(currentQuestion.imgSrc);
@@ -311,11 +315,11 @@ function selectAnswer() {
       let selectedAnswer = selectedOption.textContent;
 
       let classToApply =
-        selectedAnswer == currentQuestion.correct ? "correct" : "incorrect";
+        selectedAnswer === currentQuestion.correct ? "correct" : "incorrect";
 
       selectedOption.classList.add(classToApply);
       console.log("class applied");
-      if ((classToApply = "correct")) {
+      if ((classToApply === "correct")) {
         incrementScore();
         console.log("score");
       }
@@ -324,25 +328,26 @@ function selectAnswer() {
         console.log("time out");
         questionCount = questionCount++;
         console.log("question count");
-        if (availableQuestions.length = 0 || questionCount > MAX_QUESTIONS) {
-          showScore();
-          console.log("show score");
-        } else {
+       // if (availableQuestions.length === 0 || questionCount >= MAX_QUESTIONS) {
+       //   showScore();
+       //   console.log("show score");
+       // } else {
           newQuestion();
           console.log("giving a new question");
-        }
+        })
         5000;
+        console.log("timer")
       });
     });
-  });
-}
+  };
+
 
 // counts up when answer is correct
 function incrementScore() {
   console.log("calling increment score");
  
   score = score + SCORE_CORRECT;
-  console.log(score);
+  console.log("score pluus");
   //document.getElementById("final-score").textContent = score + 100;
 }
 
@@ -357,12 +362,11 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal
 //btn.onclick = function () {
 var finalScore = document.getElementById("final-score");
-  if (availableQuestions.length = 0 || questionCount > MAX_QUESTIONS) {
-    console.log("show score");
+console.log("fire")
     ("modal").modal("show");
-    finalScore.innertext = mostRecentScore;
+    finalScore.textContent = score;
   modal.style.display = "block";
-};
+//};
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
   modal.style.display = "none";
@@ -374,10 +378,4 @@ window.onclick = function (event) {
   }
 };
 }
-
-// show score at the the end
-function mostRecentScore() {}
-
-
-
 runGame();
