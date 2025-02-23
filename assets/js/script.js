@@ -352,7 +352,7 @@ function showScore() {
   var ScoreElement = document.getElementById("final-score");
   modal.style.display = "block";
   ScoreElement.innerText = ( `${score}`);
-  document.getElementById("bt-start").onclick = function () {
+  document.getElementById("btn-start").onclick = function () {
     window.location.href =
         "https://css-angie.github.io/pub-quiz-challenge/the-pub-quiz-challenge.html";
 };
