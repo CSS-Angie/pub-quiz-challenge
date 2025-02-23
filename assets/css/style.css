@@ -232,6 +232,11 @@ footer .policy {
   font-weight: lighter;
 }
 
+#questions {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
 #image-area {
   display: block;
   margin-bottom: 1rem;
@@ -263,7 +268,6 @@ footer .policy {
 
 .button-answer:hover {
   cursor: pointer;
-  background-color: var(--secondary-color);
   transition: transform 30ms;
   transform: scale(1.04);
 }
@@ -274,19 +278,20 @@ footer .policy {
   margin: 0.5rem;
 }
 
-.button-answer:checked {
+/*.button-answer:checked {
   cursor: none;
   background-color: inherit;
   transition:none;
   transform:initial;
-}
-.button-answer:disabled:hover {
+}*/
+.button-answer[disabled] {
   cursor: not-allowed;
   box-shadow: none;
   transition: none;
   transform: initial;
   background-color: inherit;
 }
+
 
 .correct {
   background-color: #176439;  

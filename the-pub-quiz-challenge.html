@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
     <!--Metas-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-      content="Test your knowledge with the ultimate pub quiz!">
-    <meta name="keywords"
-      content="pub quizallenge, pub quiz, pub quiz questions, questions for a pub quiz">
+    <meta name="description" content="Test your knowledge with the ultimate pub quiz!">
+    <meta name="keywords" content="pub quizallenge, pub quiz, pub quiz questions, questions for a pub quiz">
     <!-- search volumes needs to be checked-->
 
     <!--External Sources-->
-    <script src="https://kit.fontawesome.com/c58d0ee7a9.js"
-      crossorigin="anonymous">
-    </script>
+    <script src="https://kit.fontawesome.com/c58d0ee7a9.js" crossorigin="anonymous"></script>
 
     <!--Favicons by favicon.io-->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon"type="image/png"sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
 
     <link href="assets/css/style.css" rel="stylesheet">
@@ -29,23 +24,29 @@
   <body>
     <!--No Navigation-->
     <!--Hero section-->
-  <header>
-    <a href="index.html" aria-label="clicking here will take you back to the start"><div id="hero">
-        
-          <div><img class="quizpage" src="assets/images/logo-pub-quiz.png" alt="Logo of The Ultimate Pub Quiz"></div>
+    <header>
+      <a href="index.html" aria-label="clicking here will take you back to the start" ><div id="hero">
+          <div>
+            <img class="quizpage" src="assets/images/logo-pub-quiz.png" alt="Logo of The Ultimate Pub Quiz">
+          </div>
           <div class="title">The Ultimate Pub Quiz</div>
-        
-      </div></a>
-  </header>
+        </div></a
+      >
+    </header>
     <main id="question-page-main">
       <div id="total-questions"></div>
-      <h1 class="header-questionpage">Click the button with the right answer</h1>
+      <h1 class="header-questionpage">
+        Click the button with the right answer
+      </h1>
       <div id="questions-area">
         <div id="questions">
-        <h2 id="questions-text">Question</h2>
+          <h2 id="questions-text">Question</h2>
         </div>
         <div id="image-area">
-          <img src="assets/images/quiz-images/questionmark.webp" alt="picture of question mark">
+          <img
+            src="assets/images/quiz-images/questionmark.webp"
+            alt="picture of question mark"
+          />
         </div>
         <div id="answer-area">
           <button id="answerA" class="button button-answer">Answer A</button>
@@ -56,31 +57,22 @@
           <button class="button button-next" id="button-next">Next</button>
         </div>
       </div>
-       <!-- Modal content -->
-       <button id="myBtn">Open Modal</button>
-       <div id="myModal" class="modal">
-        
-        <!-- Modal content -->
-        <div class="modal-content">
-          <div class="modal-header">
-            <span class="close">&times;</span>
-            <h2 class="title">The Ultimate Pub Quiz</h2>
-          </div>
-          <div class="modal-body">
-            <p>You've finished!</p><br>
-            <p>Total score:<span id="final-score">0</span></p>
-          </div>
-          <div class="modal-footer">
-              <label for="btn-start" class="form-label" hidden>Start</label>
-              <button type="submit" class="btn btn-start" id="btn-start" 
-                  aria-label="button to start the challenge" onclick=document.location="the-pub-quiz-challenge.html">Play again!</button>
-          </div>
-        </div>
-      
+      <!-- Modal content -->
+      <button id="myBtn">Open Modal</button>
+
       </div>
     </main>
     <footer>
-      <p><a class="policy" href="privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a> |  Copyright © 2025</p>
+      <p>
+        <a
+          class="policy"
+          href="privacy-policy.html"
+          target="_blank"
+          rel="noopener"
+          >Privacy Policy</a
+        >
+        | Copyright © 2025
+      </p>
     </footer>
     <script src="assets/js/script.js"></script>
   </body>

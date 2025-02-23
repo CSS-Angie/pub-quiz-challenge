@@ -321,65 +321,65 @@ function selectAnswer() {
 
       if ((classToApply === "correct")) {
         incrementScore();
-        console.log("score");
+        console.log(`${score}`);
       }
 
-      
-      
+
+
       setTimeout(() => {
         selectedOption.classList.remove(classToApply);
         console.log("time out");
-        questionCount = questionCount++;
+        questionCount++;
         console.log("question count");
         if (availableQuestions.length === 0 || questionCount >= MAX_QUESTIONS) {
           showScore();
           console.log("show score");
         } else {
 
-        newQuestion();
+          newQuestion();
           console.log("giving a new question");
         }
-      }, 5000);
-        console.log("timer")
-      });
+      }, 2000);
+      console.log("timer")
     });
+  });
 }
 
 
 // counts up when answer is correct
 function incrementScore() {
   console.log("calling increment score");
- 
-  score += SCORE_CORRECT;
+
+  score = score + SCORE_CORRECT;
   console.log("score pluus");
   //document.getElementById("final-score").textContent = score + 100;
 }
 
 // basics modal are taken from w3school.com
 function showScore() {
-var modal = document.getElementById("myModal");
-// Get the button that opens the modal
-//var btn = document.getElementById("myBtn");
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-// return modal;
-// When the user clicks the button, open the modal
-//btn.onclick = function () {
-var finalScore = document.getElementById("final-score");
-console.log("fire")
+  var modal = document.getElementById("myModal");
+  // Get the button that opens the modal
+  //var btn = document.getElementById("myBtn");
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  // return modal;
+  // When the user clicks the button, open the modal
+  //btn.onclick = function () {
+  var finalScore = document.getElementById("final-score");
+  console.log("fire")
     ("modal").modal("show");
-    finalScore.textContent = score;
+  finalScore.textContent = score;
   modal.style.display = "block";
-//};
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
+  //};
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
     modal.style.display = "none";
-  }
-};
+  };
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
 }
 runGame();
