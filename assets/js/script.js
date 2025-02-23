@@ -305,7 +305,6 @@ function displayImage(imgSrc) {
 
 // accepts selecting answer and checks answer
 function selectAnswer() {
-  console.log("correctAnswer");
   answerButtons.forEach((answerButton) => {
     answerButton.addEventListener("click", (e) => {
       if (!acceptingAnswers) return;
@@ -319,34 +318,39 @@ function selectAnswer() {
 
       selectedOption.classList.add(classToApply);
       console.log("class applied");
+
       if ((classToApply === "correct")) {
         incrementScore();
         console.log("score");
       }
+
+      
+      
       setTimeout(() => {
-        selectedOption.parentElement.classList.remove(classToApply);
+        selectedOption.classList.remove(classToApply);
         console.log("time out");
         questionCount = questionCount++;
         console.log("question count");
-       // if (availableQuestions.length === 0 || questionCount >= MAX_QUESTIONS) {
-       //   showScore();
-       //   console.log("show score");
-       // } else {
-          newQuestion();
+        if (availableQuestions.length === 0 || questionCount >= MAX_QUESTIONS) {
+          showScore();
+          console.log("show score");
+        } else {
+
+        newQuestion();
           console.log("giving a new question");
-        })
-        5000;
+        }
+      }, 5000);
         console.log("timer")
       });
     });
-  };
+}
 
 
 // counts up when answer is correct
 function incrementScore() {
   console.log("calling increment score");
  
-  score = score + SCORE_CORRECT;
+  score += SCORE_CORRECT;
   console.log("score pluus");
   //document.getElementById("final-score").textContent = score + 100;
 }
