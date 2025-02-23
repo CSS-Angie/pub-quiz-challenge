@@ -317,47 +317,34 @@ function selectAnswer() {
         selectedAnswer === currentQuestion.correct ? "correct" : "incorrect";
 
       selectedOption.classList.add(classToApply);
-      console.log("class applied");
-
-      if ((classToApply === "correct")) {
+        if ((classToApply === "correct")) {
         incrementScore();
         console.log(`${score}`);
       }
 
-
-
       setTimeout(() => {
         selectedOption.classList.remove(classToApply);
-        console.log("time out");
+        
         questionCount++;
-        console.log("question count");
+       
         if (availableQuestions.length === 0 || questionCount >= MAX_QUESTIONS) {
           showScore();
-          console.log("show score");
         } else {
           newQuestion();
-          console.log("giving a new question");
         }
       }, 2000);
-      console.log("timer")
     });
   });
 }
 // counts up when answer is correct
 function incrementScore() {
-  console.log("calling increment score");
-
   score = score + SCORE_CORRECT;
-  console.log("score pluus");
-  //document.getElementById("final-score").textContent = score + 100;
 }
 
 // basics modal are taken from w3school.com
 function showScore() {
   var modal = document.getElementById("myModal");
-  // Get the button that opens the modal
-  //var btn = document.getElementById("myBtn");
-  // Get the <span> element that closes the modal
+   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
   // When the user clicks the button, open the modal
   return myModal();
@@ -365,9 +352,10 @@ function showScore() {
   var ScoreElement = document.getElementById("final-score");
   modal.style.display = "block";
   ScoreElement.innerText = ( `${score}`);
-  console.log("fire")
-
-    
+  document.getElementById("bt-start").onclick = function () {
+    window.location.href =
+        "https://css-angie.github.io/pub-quiz-challenge/the-pub-quiz-challenge.html";
+};
   };
   // When the user clicks on <span> (x), close the modal
   span.onclick = function () {

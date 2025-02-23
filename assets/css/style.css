@@ -1,7 +1,7 @@
-/*Google Fonts import */
+/* Google Fonts import */
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
-/*CSS Variables*/
+/* CSS Variables */
 :root {
   --primary-font: "Open Sans", sans-serif;
   --secondary-font: "Bungee", cursive;
@@ -12,7 +12,7 @@
   --text-color: #ffd880;
 }
 
-/*CSS Basics */
+/* CSS Basics */
 * {
   background-color: var(--primary-color);
   font-family: var(--primary-font);
@@ -54,7 +54,8 @@ a {
   text-decoration: none;
 }
 
-/*CSS homepage*/
+/* CSS homepage*/
+/* Hero section */
 #hero {
   display: flex;
   flex-direction: row;
@@ -83,10 +84,12 @@ a {
   font-size: 2.3rem;
 }
 
+/* Main section player name */
 .intro {
   font-weight: 300;
   margin-bottom: 30px;
 }
+
 .intro-text {
   padding: 0 2rem;
 }
@@ -142,43 +145,7 @@ a {
   font-size: 1.5rem;
 }
 
-#level-area {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-  width: 90%;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.choose {
-  display: flex;
-  flex-direction: row;
-  width: 90%;
-  justify-content: center;
-}
-
-#level-area .btn-level {
-  display: flex;
-  flex-direction: row;
-  padding: 1rem;
-  margin-top: 1rem;
-  width: 90%;
-  font-weight: 400;
-  text-transform: lowercase;
-  justify-content: center;
-  margin-left: 1rem;
-  letter-spacing: 2px;
-  font-size: 1.2rem;
-}
-
-#level-area .btn-level:hover,
-#confirm-name .btn-level:hover {
-  cursor: pointer;
-  background-color: var(--secondary-color);
-  transition: 0.3s;
-}
-
+/* Main section play button */
 .btn-start {
   padding: 10px 25px;
   text-align: center;
@@ -199,6 +166,7 @@ a {
   background-color: var(--primary-color);
 }
 
+/* Footer section */
 footer {
   margin-top: auto;
   background-color: var(--contrast-color);
@@ -218,6 +186,7 @@ footer .policy {
   color: var(--primary-color);
 }
 
+/* Quiz page */
 #questions-area {
   display: flex;
   flex-direction: column;
@@ -257,6 +226,7 @@ footer .policy {
   align-items: center;
 }
 
+/* Quiz page answer buttons */
 .button-answer {
   display: flex;
   flex-direction: column;
@@ -278,12 +248,6 @@ footer .policy {
   margin: 0.5rem;
 }
 
-/*.button-answer:checked {
-  cursor: none;
-  background-color: inherit;
-  transition:none;
-  transform:initial;
-}*/
 .button-answer[disabled] {
   cursor: not-allowed;
   box-shadow: none;
@@ -291,7 +255,6 @@ footer .policy {
   transform: initial;
   background-color: inherit;
 }
-
 
 .correct {
   background-color: #176439;  
@@ -301,19 +264,7 @@ footer .policy {
   background-color: #A22C2C;
   }
 
-.button-next {
-  display: block; /*block to center the button*/
-  padding: 0.5rem 2rem;
-  margin: 2rem 0;
-}
-
-.button-next:hover {
-  padding: 0.5rem 2rem;
-  background-color: var(--secondary-color);
-  transition: 0.3s;
-}
-
-/*CSS Result Modal */
+/* CSS Result Modal */
 /* The Modal (background) */
 .modal {
   display: none;
