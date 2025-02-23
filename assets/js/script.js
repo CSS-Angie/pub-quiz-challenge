@@ -335,7 +335,6 @@ function selectAnswer() {
           showScore();
           console.log("show score");
         } else {
-
           newQuestion();
           console.log("giving a new question");
         }
@@ -344,8 +343,6 @@ function selectAnswer() {
     });
   });
 }
-
-
 // counts up when answer is correct
 function incrementScore() {
   console.log("calling increment score");
@@ -362,15 +359,16 @@ function showScore() {
   //var btn = document.getElementById("myBtn");
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
-  // return modal;
   // When the user clicks the button, open the modal
-  //btn.onclick = function () {
-  var finalScore = document.getElementById("final-score");
-  console.log("fire")
-    ("modal").modal("show");
-  finalScore.textContent = score;
+  return myModal();
+  function myModal() {
+  var ScoreElement = document.getElementById("final-score");
   modal.style.display = "block";
-  //};
+  ScoreElement.innerText = ( `${score}`);
+  console.log("fire")
+
+    
+  };
   // When the user clicks on <span> (x), close the modal
   span.onclick = function () {
     modal.style.display = "none";
