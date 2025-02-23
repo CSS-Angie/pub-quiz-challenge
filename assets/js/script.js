@@ -352,11 +352,13 @@ function showScore() {
   var ScoreElement = document.getElementById("final-score");
   modal.style.display = "block";
   ScoreElement.innerText = ( `${score}`);
+
   document.getElementById("btn-start").onclick = function () {
     window.location.href =
         "https://css-angie.github.io/pub-quiz-challenge/the-pub-quiz-challenge.html";
-};
+    };
   };
+}
   // When the user clicks on <span> (x), close the modal
   span.onclick = function () {
     modal.style.display = "none";
@@ -367,5 +369,5 @@ function showScore() {
       modal.style.display = "none";
     }
   };
-}
+
 runGame();
