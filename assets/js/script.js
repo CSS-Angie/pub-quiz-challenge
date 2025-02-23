@@ -340,13 +340,10 @@ function selectAnswer() {
 function incrementScore() {
   score = score + SCORE_CORRECT;
 }
-
+var modal = document.getElementById("myModal");
 // basics modal are taken from w3school.com
 function showScore() {
-  var modal = document.getElementById("myModal");
-   // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
-  // When the user clicks the button, open the modal
+  
   return myModal();
   function myModal() {
   var ScoreElement = document.getElementById("final-score");
@@ -359,8 +356,9 @@ function showScore() {
     };
   };
 }
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function () {
+let closingCross = document.getElementsByClassName("close")[0];
+  // When the user clicks on <cross> (x), close the modal
+  closingCross.onclick = function () {
     modal.style.display = "none";
   };
   // When the user clicks anywhere outside of the modal, close it
