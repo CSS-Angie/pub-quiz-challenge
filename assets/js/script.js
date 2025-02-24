@@ -63,7 +63,7 @@ let questionsEasy = [
   },
   {
     question: "The Playstation game console was developed by which company?",
-    imgSrc: "assets/images/quiz-images/PS5.webp",
+    imgSrc: "assets/images/quiz-images/ps5.webp",
     answers: ["Nintendo", "Sega", "Sony"],
     correct: "Sony",
   },
