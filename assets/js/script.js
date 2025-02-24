@@ -248,7 +248,6 @@ let questionsEasy = [
 ];
 
 // Constants and variables
-const nextButton = document.getElementById("button-next");
 let answerButtons = document.querySelectorAll(".button-answer");
 let currentQuestion = {};
 let acceptingAnswers = true;
