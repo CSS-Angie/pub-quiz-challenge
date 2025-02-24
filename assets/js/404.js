@@ -1,8 +1,4 @@
-function returnToHomepage(){
-document.getElementById("btn-return").onclick = function () {
+document.getElementById("button-return").onclick = function () {
     window.location.href =
         "https://css-angie.github.io/pub-quiz-challenge/";
 };
-}
-
-returnToHomepage();
